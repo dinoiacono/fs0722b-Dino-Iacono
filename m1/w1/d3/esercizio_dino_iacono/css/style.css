@@ -1,0 +1,74 @@
+ :root{
+    font-family: 'Roboto', sans-serif;;
+ }
+ #logo {
+    width: 20%;
+    margin-left: 40%;
+    margin-bottom: 1em;
+ }
+
+ .motto{
+    text-align: center;
+    background-color: rgb(253, 251, 242) ;
+    border-top: solid 1px rgb(249, 217, 133);
+    padding: 1em 0;
+}
+#motto strong{
+    text-shadow: 1px 1px grey;
+}
+
+h1{
+    text-align: center;
+    margin-top: 4rem;
+    width: 720px;
+}
+.presentazione{
+    width: 720px;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.focaccia{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+#focaccia{
+    border-radius: 10px;
+    box-shadow: 4px 4px 4px #666;
+}
+.citazione-img{
+    margin-top: 1em;
+    color: gray;
+}
+
+.featured{
+    border-left: solid 1px orange;
+    padding-left: 1em;
+    margin-top: 1em;
+    width: 704px;
+}
+#featured {
+    margin: 0 0;
+}
+
+.featured a {
+    color: red;
+}
+
+.ingradienti{
+    width: 720px;
+}
+
+#ingradienti{
+    border-bottom: solid 1px #666;
+    padding-bottom: 1em;
+}
+#metodo{
+    border-bottom: solid 1px #666;
+    padding-bottom: 1em;
+}
