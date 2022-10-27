@@ -1,0 +1,129 @@
+body{
+    font-family: 'Poppins', sans-serif;
+    background-image: url(../img/sfondo.png);
+    background-position: center center;
+    
+
+}
+
+/*HEADERr*/
+
+header{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 90%;
+    margin: 10px auto;
+    background-color: blueviolet;
+    box-shadow: 2px 2px 2px #666;
+}
+
+#logo{
+    width: 60%;
+    margin: 20px auto;
+}
+
+#motto{
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+#menu_header{
+    margin-bottom: 20px;
+    list-style-type: none;
+}
+nav ul li a{
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+/*fine HEADER inizio MIAN*/
+
+main{
+    width: 90%;
+    margin: 0 auto;
+    background-color: #fff;
+    box-shadow: 2px 2px 2px #666;
+    padding: 10px 10px ;
+    font-weight: 300;
+    font-size: medium;
+    box-sizing: border-box;
+}
+
+h1{
+    font-weight: 500;
+    margin: 20px 0;
+    font-size: x-large;
+    
+}
+#mario-rossi{
+    margin-bottom: 20px;
+    opacity: 0.4;
+}
+.paragrafi{
+    margin-bottom: 20px;
+}
+.bold{
+    font-weight: 500;
+    opacity: 0.6;
+}
+
+.liste{
+    padding-left: 30px;
+    margin-bottom: 20px;
+}
+
+/*TABELLA*/
+
+table{
+    text-align: center;
+    border-bottom: solid 2px cyan;
+    margin-bottom: 20px;
+    align-content: center;
+}
+table caption{
+    font-style: italic;
+    font-weight: 500;
+}
+thead{
+    background-color: cyan;
+}
+
+tr{
+    height: 60px; 
+}
+.table-decoration{
+    background-color: lightgrey;
+    border-bottom: solid 1px #666;
+    border-top: solid 1px #666 ;
+}
+th, td{
+    text-align: center;
+}
+
+
+/*VIDEO*/
+iframe{
+    width: 90%;
+    margin: 0 5%;
+    margin-bottom: 20px;
+    border-radius: 20px;
+}
+
+#novità {
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    
+}
+
+
+footer{
+    width: 90%;
+    margin: 10px auto;
+    background-color: cornflowerblue;
+    text-align: center;
+    box-shadow: 2px 2px 2px #666;
+}
+
