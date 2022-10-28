@@ -109,6 +109,9 @@ h1{
     border-radius: 213px;
 }
 
+aside article div a{
+    text-decoration: none;
+}
 /*SECTION ROSSA*/
 
 .section-rossa{
