@@ -2,6 +2,7 @@ body{
     font-family: 'Poppins', sans-serif;
     background-image: url(../img/sfondo.png);
     background-position: center center;
+    line-height: 24px;
     
 
 }
@@ -14,7 +15,7 @@ header{
     text-align: center;
     width: 90%;
     margin: 10px auto;
-    background-color: blueviolet;
+    background-image: linear-gradient(red, blue);
     box-shadow: 2px 2px 2px #666;
 }
 
@@ -36,6 +37,11 @@ nav ul li a{
     text-decoration: none;
     text-transform: uppercase;
     color: #fff;
+}
+
+#menu_header li a:hover{
+    color:black;
+    font-size: 30px;
 }
 
 /*fine HEADER inizio MIAN*/
@@ -77,10 +83,10 @@ h1{
 /*TABELLA*/
 
 table{
-    text-align: center;
+    width: 90%;
+    margin: 0 auto;
     border-bottom: solid 2px cyan;
     margin-bottom: 20px;
-    align-content: center;
 }
 table caption{
     font-style: italic;
@@ -90,9 +96,6 @@ thead{
     background-color: cyan;
 }
 
-tr{
-    height: 60px; 
-}
 .table-decoration{
     background-color: lightgrey;
     border-bottom: solid 1px #666;
@@ -100,6 +103,7 @@ tr{
 }
 th, td{
     text-align: center;
+    padding: 15px 10px;
 }
 
 
@@ -111,13 +115,61 @@ iframe{
     border-radius: 20px;
 }
 
+#form_newsletter{
+    background-color:lightgray;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    width: 90%;
+   
+}
+
 #novità {
     text-align: center;
     text-transform: uppercase;
     margin-bottom: 20px;
+    padding-top: 10px;
+    font-weight: 500;
+    font-size: 1.5em;
     
 }
 
+#testo-form{
+   margin: 0 auto;
+    width: 90%;
+    margin-bottom: 20px;
+}
+form{
+    width: 90%;
+    margin: 0 auto;
+    padding-bottom: 10px;
+}
+input{
+    border-style: none;
+    border-bottom: dashed 1px black;
+    width: 60%;
+    margin-left: 7.5%;
+}
+button{
+    border-style: none;
+    background-color: blue;
+    color: #fff;
+    width: 20%;
+
+}
+button:hover{
+    background-color: red;
+    color: black;
+}
+
+/* inizio ARTICLES*/
+
+#articoli{
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
 
 footer{
     width: 90%;
