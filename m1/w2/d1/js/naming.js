@@ -11,11 +11,15 @@ console.log($pet);
 var _pet = 'leone';
 console.log(_pet);
 
-var bottone = prompt ('sei maggiorenne?');
-console.log(bottone);
-    if(bottone='si'){
-         location.href = 'https://www.bernabei.it/';
+
+    var anni = prompt('Sei maggiorenne?');
+    console.log(anni);
+
+    if(anni == 'si'){
+        location.href = 'https://www.bernabei.it/';
+    
     }else{
         location.href = 'https://www.peppapig.com/it-it';
     }
+
    
