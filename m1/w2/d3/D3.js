@@ -9,8 +9,10 @@ var b = 10
 
 if (a > b){
   console.log('a è maggiore')
-} else (a < b); {
+} else if (a < b) {
   console.log('b è maggiore')
+} else {
+  console.log('sono uguali')
 }
 
 /* ESERCIZIO 2
@@ -30,6 +32,14 @@ if (b!==5){
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 
+var numero = 30;
+var risultato = 30 % 5;
+if (risultato=0){
+  console.log('divisibile per 5')
+} else {
+  console.log('non è divisibile per 5')
+}
+
 /* ESERCIZIO 4
   Scrivi un algoritmo per verificare che, dati due numeri interi, il valore di uno di essi sia 8 oppure se la loro addizione/sottrazione sia uguale a 8.
 */
@@ -45,7 +55,7 @@ if (b!==5){
 /* SCRIVI QUI LA TUA RISPOSTA */
 
 var totalShoppingCart = 40;
-var costoSpedizione = 10;
+const costoSpedizione = 10;
 
 if (totalShoppingCart>50){
   console.log(totalShoppingCart)
@@ -60,6 +70,13 @@ else {
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
+var totalShoppingCartBlackFriday = ((totalShoppingCart / 100) * 80)
+if (totalShoppingCartBlackFriday>50){
+  console.log(totalShoppingCartBlackFriday)
+} 
+else {
+  console.log(totalShoppingCartBlackFriday+costoSpedizione)
+}
 
 /* ESERCIZIO 7
   Crea tre variabili, e assegna un valore numerico a ciascuna di esse.
@@ -82,7 +99,8 @@ else {
 /* SCRIVI QUI LA TUA RISPOSTA */
 
 /* ESERCIZIO 10
-  Modifica la logica del seguente algoritmo in modo che mostri in console il messaggio corretto in ogni circostanza.
+  Modifica la logica del seguente algoritmo in modo che mostri in console il messaggio corretto in ogni circostanza
+*/
   let val = 7
   if (val < 10) {
       console.log("Meno di 10");
@@ -91,7 +109,7 @@ else {
     } else {
       console.log("Uguale a 10 o maggiore");
     }
-*/
+
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 
@@ -103,15 +121,21 @@ const me = {
   name: 'John',
   lastName: 'Doe',
   skills: ['javascript', 'html', 'css'],
+  //city: 'Toronto',
 }
 
 /* SCRIVI QUI LA TUA RISPOSTA */
+
+me.city = 'Toronto'
+console.log(me);
 
 /* ESERCIZIO 12
   Lavorando sempre sull'oggetto precedentemente fornito, scrivi del codice per rimuovere la proprietà "lastName".
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
+delete me.lastName;
+console.log(me)
 
 /* ESERCIZIO 13
   Lavorando sempre sull'oggetto precedentemente fornito, scrivi del codice per rimuovere l'ultimo elemento della proprietà "skills".
