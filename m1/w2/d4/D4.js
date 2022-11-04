@@ -105,7 +105,7 @@ const starWarsCharacters = [
 Crea una variabile chiamata "characters" e inserisci un array vuoto
 */
 
-let characters = [];
+//let characters = [];
 
 /* ESERCIZIO 2
 Usando un for loop, cicla l'array "starWarsCharacters" ed accedi alla proprietà "name". 
@@ -113,38 +113,38 @@ Usa il valore contenuto inserendolo nell'array creato precedentemente.
 Come risultato dovresti ottenere qualcosa di simile: ["Luke Skywalker", "C-3PO", "R2-D2", etc..]
 */
 
-for (let i = 0; i < starWarsCharacters.length; i++) {
+/*for (let i = 0; i < starWarsCharacters.length; i++) {
   let nomi = starWarsCharacters[i].name;
   characters.push(nomi);
 }
-console.log(characters);
+console.log(characters);*/
 
 /* ESERCIZIO 3
   Seguendo i passaggi precedenti crea un array chiamato "femaleCharacters" e inserisci un oggetto con questa struttura: 
   {name: Leia Organa, hair_color: "brown", eye_color: "brown"}
 */
 
-let femaleCharacters = [];
+/*let femaleCharacters = [];
 let Leia = {
   name: "Leia organa",
   hair_color: "brown",
   eye_color: "brown",
 };
 femaleCharacters.push(Leia);
-console.log(femaleCharacters);
+console.log(femaleCharacters);*/
 
 /* ESERCIZIO 4
   Crea un oggetto "eyeColor" che abbia come proprietà: blue, yellow, brown, red, blue-gray.
   ognuna di queste proprietà contiene un array vuoto
 */
 
-let eyeColor = {
+/*let eyeColor = {
   blue: [],
   yellow: [],
   brown: [],
   red: [],
   blue_gray: [],
-};
+};*/
 //console.log(eyeColor)
 
 /* ESERCIZIO 5
@@ -159,7 +159,7 @@ let eyeColor = {
   let massa = 0;
   let i = 0;
     while (i<starWarsCharacters.lenght){
-    massa += parseInt(starWarsCharacters[i].mass);
+    massa =+ parseInt(starWarsCharacters[i].mass);
     i++;
     }
 console.log(massa);

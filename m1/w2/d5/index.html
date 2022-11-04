@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>La mia calcolatrice</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+   <main><div class="calcolatrice">
+      <input id="numeri" placeholder="0" type="text" />
+      <div class="numeri">
+        <button data-simbolo="1" onclick="aggiungiCifra(this)">1</button>
+        <button data-simbolo="2" onclick="aggiungiCifra(this)">2</button>
+        <button data-simbolo="3" onclick="aggiungiCifra(this)">3</button>
+        <button data-simbolo="4" onclick="aggiungiCifra(this)">4</button>
+        <button data-simbolo="5" onclick="aggiungiCifra(this)">5</button>
+        <button data-simbolo="6" onclick="aggiungiCifra(this)">6</button>
+        <button data-simbolo="7" onclick="aggiungiCifra(this)">7</button>
+        <button data-simbolo="8" onclick="aggiungiCifra(this)">8</button>
+        <button data-simbolo="9" onclick="aggiungiCifra(this)">9</button>
+        <button data-simbolo="0" onclick="aggiungiCifra(this)">0</button>
+      </div>
+      <div class="operatori">
+        <button data-simbolo="+" onclick="aggiungiCifra(this)">+</button>
+        <button data-simbolo="/" onclick="aggiungiCifra(this)">/</button>
+        <button data-simbolo="*" onclick="aggiungiCifra(this)">x</button>
+        <button data-simbolo="-" onclick="aggiungiCifra(this)">-</button>
+        <button onclick="del()">C</button>
+        <button onclick="tot()">=</button>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+</main> 
+  </body>
+</html>
