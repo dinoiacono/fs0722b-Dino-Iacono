@@ -57,47 +57,55 @@
       */
 
       const changeTitle = function (newTitle) {
-        //
+        document.querySelector('h1').textContent= newTitle
       }
-
+      //changeTitle('ciao');
       /* ESERCIZIO 2
        Scrivi una funzione per cambiare la classe del titolo della pagina in "myHeading".
       */
 
       const addClassToTitle = function () {
-        //
+        document.querySelector('h1').classList.toggle('myHeading');
       }
-
+      //addClassToTitle();
       /* ESERCIZIO 3
        Scrivi una funzione per cambiare il contenuto di tutti i p che sono discendenti di un div.
       */
 
       const changePcontent = function () {
-        //
+        let contenutoNuovo = document.querySelectorAll("div > p");
+        for (let i = 0; i < contenutoNuovo.length; i++) {
+             contenutoNuovo[i].textContent = 'contenuto nuovo';
+        }
       }
-
+      //changePcontent();
       /* ESERCIZIO 4
        Scrivi una funzione per cambiare la proprietà href di ogni link a https://www.google.com
       */
 
       const changeUrls = function () {
-        //
+        let cambioLink = document.querySelector("a");
+        cambioLink.href = "https://www.google.com/";
       }
-
+      //changeUrls();
       /* ESERCIZIO 5
        Scrivi una funzione per aggiungere un nuovo elemento alla seconda lista non-ordinata.
       */
 
       const addToTheSecond = function (content) {
-        //
+        let lista = document.getElementById('secondList');
+        let element = document.createElement('li');
+        lista.append(element);
+        lista.childNodes[3].nodeValue= 'nuovo elemento';
       }
-
+      
+      addToTheSecond();
       /* ESERCIZIO 6
        Scrivi una funzione per aggiungere un secondo paragrafo al primo div.
       */
 
       const addParagraph = function (content) {
-        //
+        
       }
 
       /* ESERCIZIO 7
