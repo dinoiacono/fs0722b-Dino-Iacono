@@ -15,11 +15,11 @@ document.querySelector('#salva')
     completato.addEventListener('click', ()=> {
         //div.classList.add('completato');//assegno una classe aggiuntiva
         document.querySelector('#fatti')
-        .append(div);//sposto il div nella lista completati
+        .append(div);//sposto il div nella lista 
     })
 
-    div.append(span, completato);
-    document.querySelector('#da-fare').append(div);
+    div.append(span, completato);//metto il testo ed il bottone nel div
+    document.querySelector('#da-fare').append(div);//metto il div nella lista da fare
 
 
     testo.value = '';            
