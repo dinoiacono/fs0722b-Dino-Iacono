@@ -4,6 +4,9 @@
       .myHeading {
         color: red;
       }
+      .greenUl{
+        background-color: green;
+      }
     </style>
   </head>
   <body>
@@ -52,6 +55,10 @@
       </h2>
     </div>
     <script>
+      
+      
+      /*I RICHIAMI ALLE COSTANTI SONO TUTTI COMMENTATI, DECOMMENTARLI PER VEDERNE IL FUNZIONAMENTO*/
+      
       /* ESERCIZIO 1
        Scrivi una funzione per cambiare il titolo del documento in qualcos'altro.
       */
@@ -65,7 +72,12 @@
       */
 
       const addClassToTitle = function () {
-        document.querySelector('h1').classList.toggle('myHeading');
+        let title = document.querySelector('h1')
+        title.classList.replace( 'myClass', 'myHeading');
+        /*title.classList.remove('myClass')
+        title.classList.add('myHeading');*/
+        
+        //correggere con querySelector, remove ed add;
       }
       //addClassToTitle();
       /* ESERCIZIO 3
@@ -73,7 +85,7 @@
       */
 
       const changePcontent = function () {
-        let contenutoNuovo = document.querySelectorAll("div > p");
+        let contenutoNuovo = document.querySelectorAll("div p");
         for (let i = 0; i < contenutoNuovo.length; i++) {
              contenutoNuovo[i].textContent = 'contenuto nuovo';
         }
@@ -95,64 +107,80 @@
       const addToTheSecond = function (content) {
         let lista = document.getElementById('secondList');
         let element = document.createElement('li');
+        element.innerHTML = content;
         lista.append(element);
       }
       
-      //addToTheSecond();
+      //addToTheSecond('sjgfosugc');
       /* ESERCIZIO 6
        Scrivi una funzione per aggiungere un secondo paragrafo al primo div.
       */
 
       const addParagraph = function (content) {
-        
+        let div = document.querySelector('div');
+        let p = document.createElement('p');
+        p.innerText = content;
+        div.append(p);
       }
-
+      //addParagraph('secondo paragrafo nel primo div');
       /* ESERCIZIO 7
        Scrivi una funzione per far scomparire la prima lista non-ordinata.
       */
 
       const firstUlDisappear = function () {
-        //
+        let lista = document.getElementById('firstList');
+        lista.style.display = 'none';
       }
-
+      //firstUlDisappear();
       /* ESERCIZIO 8
        Scrivi una funzione per rendere verde lo sfondo di ogni lista non-ordinata.
       */
 
       const paintItGreen = function () {
-        //
+        let liste = document.querySelectorAll('ul');
+        for(let i = 0; i < liste.length; i++){
+          liste[i].style.backgroundColor = 'green';
+        }
+        
       }
-
+      //paintItGreen();
       /* ESERCIZIO 9
        Rendi il tag h1 capace di cambiare colore del testo ogni volta che l'utente ci clicca sopra.
       */
 
       const makeItClickable = function () {
-        //
       }
-
+       
       /* ESERCIZIO 10
        Cambia il testo del footer con qualcos'altro quando l'utente ci clicca sopra.
       */
 
       const changeFooterText = function () {
-        //
+        let footer = document.getElementsByClassName('footer');
+        if(footer[0].addEventListener('click', function(){
+          footer[0].innerHTML = '<p>nuovo testo del footer</p>';
+        }));
       }
-
+      //changeFooterText();
       /* ESERCIZIO 11
        Aggiungi un event listener al campo di testo nella pagina e fai in modo che dopo ogni lettera il suo valore venga mostrato in console.
       */
 
       const inputField = document.getElementById('input-field')
-      // ...
-
+       //if(inputField.addEventListener('keyup', function(){
+        //console.log(inputField);
+       //}));
+        console.log(inputField);
+      
       /* ESERCIZIO 12
        Crea un messaggio di benvenuto con un alert quando la pagina ha finito di caricarsi.
       */
 
-      window.onload = function () {
-        //
-      }
+      /*window.onload = function () {
+       window.alert ('BENVENUTO!')
+      }*/
+      
+     
     </script>
   </body>
 </html>
