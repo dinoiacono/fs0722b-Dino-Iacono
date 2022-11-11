@@ -124,7 +124,6 @@ const movies = [
   },
 ];
 
-
 // JS Basics
 
 /* ESERCIZIO A
@@ -192,8 +191,8 @@ me.skills.pop(); //mi richiamo l'array skills contenuto nell'oggetto me e con po
   Crea una funzione chiamata "dice": deve generare un numero casuale tra 1 e 6.
 */
 
-function dice() {
-  let numero = Math.floor(Math.random() * 6 + 1);
+function dice() {      //con il metodo math.floor mi prendo solo i numeri interi e non decimali
+  let numero = Math.floor(Math.random() * 6 + 1);//con il metodo math.random genero un numero casuale da 1 a 6 e poi uso return per avere il valore in console
   return numero;
 }
 //console.log(dice());
@@ -202,9 +201,9 @@ function dice() {
   Crea una funzione chiamata "whoIsBigger" che riceve due numeri come parametri e ritorna il maggiore dei due.
 */
 
-function whoIsBigger(a, b) {
-  if (a > b) {
-    return a;
+function whoIsBigger(a, b) {  //imposto come parametri della funzione i due numeri da confrontare 
+  if (a > b) {                //uso un if in modo da ccapire qual'è il numero maggiore
+    return a;                 //con return ho il valore più grande in console
   } else {
     return b;
   }
@@ -216,8 +215,8 @@ function whoIsBigger(a, b) {
   Es.: splitMe("I love coding") => ritorna ["I", "Love", "Coding"]
 */
 
-function splitMe(str) {
-  return str.split(" ");
+function splitMe(str) { //imposto una stringa come parametro della funzione
+  return str.split(" ");//uso split con valore lo spazio in modo che mi ritorni un'array contenente le parole intere altrimenti mi farebbe un'array con tutte le lettere separate
 }
 //console.log(splitMe('i love coding'));
 
@@ -226,8 +225,8 @@ function splitMe(str) {
   Se il valore booleano è true la funzione deve ritornare la stringa senza il primo carattere, altrimenti la deve ritornare senza l'ultimo.
 */
 
-function deleteOne(str, booleano = true) {
-  if (booleano) {
+function deleteOne(str, booleano = true) {//imposto come parametri della funzione una stringa e un booleano impostato a true
+  if (booleano) {//eseguo la verifica che il booleano sia true e ritorno la stringa senza la prima lettera usando slice, nel caso il booleano sia false me ritorna la stringa senza l'ultima lettera
     return str.slice(1);
   } else {
     return str.slice(0, -1);
@@ -358,70 +357,78 @@ function isTodayMyBirthday() {
   Scrivi una funzione per selezionare l'elemento dotato di id "container" all'interno della pagina.
 */
 
-function container(){
-  let elemento = document.getElementById('container')
+function container() {
+  let elemento = document.getElementById("container");
 }
-
+//container();
 /* ESERCIZIO 21
   Scrivi una funzione per selezionare ogni tag <td> all'interno della pagina.
 */
 
-function tag(){
-  let elementi = document.getElementsByTagName('td')
+function tag() {
+  let elementi = document.getElementsByTagName("td");
 }
-
+//tag();
 /* ESERCIZIO 22
   Scrivi una funzione che, tramite un ciclo, stampa in console il testo contenuto in ogni tag <td> all'interno della pagina.
 */
 
-function stampaConsole(){
-  let testi= document.querySelectorAll('td')
+function stampaConsole() {
+  let testi = document.querySelectorAll("td");
+  //mi creo una variabile dove mi bersaglio tutti i td del DOM
   for (let i = 0; i < testi.length; i++) {
-    console.log(testi[i].textContent)
+    console.log(testi[i].textContent);
+  }
+//eseguo un ciclo for per stampare in console tutti i testi al loro interno
 }
-}
-
+//stampaConsole();
 /* ESERCIZIO 23
   Scrivi una funzione per aggiungere un background di colore rosso a ogni link all'interno della pagina.
 */
 
-function coloreLink(){
-  let links= document.querySelectorAll('a')
+function coloreLink() {
+  let links = document.querySelectorAll("a");
+  //mi creo una variabile dove mi bersaglio tutte i link all'interno del documento
   for (let i = 0; i < links.length; i++) {
-   links[i].style.backgroundColor = 'red'
+    links[i].style.backgroundColor = "red";
+  }
+//eseguo un ciclo for per attribuire ad ogni link un colore di background rosso
 }
-}
-
+//coloreLink();
 /* ESERCIZIO 24
   Scrivi una funzione per aggiungere un nuovo elemento alla lista non ordinata con id "myList".
 */
 
-function nuovoElemento(){
-  let nuovoElemento = document.createElement('li')
-  let lista = document.getElementById('myList')
-  lista.append(nuovoElemento)
+function nuovoElemento() {
+  let nuovoElemento = document.createElement("li");
+  // mi creo una variabile e gli do come valore un createElement per creare un elemento
+  let lista = document.getElementById("myList");
+  // mi creo una seconda variabile per bersagliare il contenitore dove mettere il nuovo elemento
+  lista.append(nuovoElemento);
+  // infine con il metodo append e metto il nuovo elemento al suo interno
 }
-
+//nuovoElemento();
 /* ESERCIZIO 25
   Scrivi una funzione per svuotare la lista non ordinata con id "myList".
 */
 
-function svuotaLista(){
-  let lista = document.getElementById('myList')
-  lista.parentNode.removeChild('li')
+function svuotaLista() {
+  //creo la funzione e uso il get element by id in modo da bersagliare quel singolo elemento e poi dando un valore vuoto a innerHTML cancello quello che c'è all'interno del tag bersagliato
+  document.getElementById("myList").innerHTML = "";
 }
-
+//svuotaLista();
 /* ESERCIZIO 26
   Scrivi una funzione per aggiungere ad ogni tag <tr> la classe CSS "test"
 */
 
-function aggiungiClasse(){
-  let tag = document.getElementsByTagName('tr')
-  for (let i = 0; i < tag.length; i++){
-    tag[i].classList.add('test')
+function aggiungiClasse() {
+  //creo la funzione e uso il get element by tag per bersagliare tutti gli elementi con quel tag, eseguo un ciclo for per attribbuire ad ognuno di essi la classe test
+  let tag = document.getElementsByTagName("tr");
+  for (let i = 0; i < tag.length; i++) {
+    tag[i].classList.add("test");
   }
 }
-
+//aggiungiClasse();
 // [EXTRA] JS Avanzato
 
 /* ESERCIZIO 27
@@ -452,13 +459,18 @@ function aggiungiClasse(){
   Crea una funzione chiamata "isItPrime" che riceve un numero come parametro e ritorna true se il numero fornito è un numero primo.
 */
 
-function isItPrime(number){
-  for(let i = 2; i<number ; i++){
-    if (number % i != 0){
-      return true
-    }else{
-      return false
+function isItPrime(number) {
+  //creo la funzione e gli attribuisco il parametro number
+  for (let i = 2; i < number; i++) {
+    //eseguo un ciclo for e lo faccio partire da 2 perchè è
+    //il primo numero con cui provare a dividere il paarametro in modo da verificare che sia un numero primo
+    if (number % i != 0) {
+      //uso un if così in caso il risultato del modulo sia diverso da zero mi ritorna in console true
+      return true;
+    } else {
+      return false;
     }
   }
 }
-//console.log(isItPrime(7));
+
+//console.log(isItPrime(8));
