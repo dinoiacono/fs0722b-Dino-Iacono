@@ -191,8 +191,9 @@ me.skills.pop(); //mi richiamo l'array skills contenuto nell'oggetto me e con po
   Crea una funzione chiamata "dice": deve generare un numero casuale tra 1 e 6.
 */
 
-function dice() {      //con il metodo math.floor mi prendo solo i numeri interi e non decimali
-  let numero = Math.floor(Math.random() * 6 + 1);//con il metodo math.random genero un numero casuale da 1 a 6 e poi uso return per avere il valore in console
+function dice() {
+  //con il metodo math.floor mi prendo solo i numeri interi e non decimali
+  let numero = Math.floor(Math.random() * 6 + 1); //con il metodo math.random genero un numero casuale da 1 a 6 e poi uso return per avere il valore in console
   return numero;
 }
 //console.log(dice());
@@ -201,9 +202,11 @@ function dice() {      //con il metodo math.floor mi prendo solo i numeri interi
   Crea una funzione chiamata "whoIsBigger" che riceve due numeri come parametri e ritorna il maggiore dei due.
 */
 
-function whoIsBigger(a, b) {  //imposto come parametri della funzione i due numeri da confrontare 
-  if (a > b) {                //uso un if in modo da ccapire qual'è il numero maggiore
-    return a;                 //con return ho il valore più grande in console
+function whoIsBigger(a, b) {
+  //imposto come parametri della funzione i due numeri da confrontare
+  if (a > b) {
+    //uso un if in modo da ccapire qual'è il numero maggiore
+    return a; //con return ho il valore più grande in console
   } else {
     return b;
   }
@@ -215,8 +218,9 @@ function whoIsBigger(a, b) {  //imposto come parametri della funzione i due nume
   Es.: splitMe("I love coding") => ritorna ["I", "Love", "Coding"]
 */
 
-function splitMe(str) { //imposto una stringa come parametro della funzione
-  return str.split(" ");//uso split con valore lo spazio in modo che mi ritorni un'array contenente le parole intere altrimenti mi farebbe un'array con tutte le lettere separate
+function splitMe(str) {
+  //imposto una stringa come parametro della funzione
+  return str.split(" "); //uso split con valore lo spazio in modo che mi ritorni un'array contenente le parole intere altrimenti mi farebbe un'array con tutte le lettere separate
 }
 //console.log(splitMe('i love coding'));
 
@@ -225,8 +229,10 @@ function splitMe(str) { //imposto una stringa come parametro della funzione
   Se il valore booleano è true la funzione deve ritornare la stringa senza il primo carattere, altrimenti la deve ritornare senza l'ultimo.
 */
 
-function deleteOne(str, booleano = true) {//imposto come parametri della funzione una stringa e un booleano impostato a true
-  if (booleano) {//eseguo la verifica che il booleano sia true e ritorno la stringa senza la prima lettera usando slice, nel caso il booleano sia false me ritorna la stringa senza l'ultima lettera
+function deleteOne(str, booleano = true) {
+  //imposto come parametri della funzione una stringa e un booleano impostato a true
+  if (booleano) {
+    //eseguo la verifica che il booleano sia true e ritorno la stringa senza la prima lettera usando slice, nel caso il booleano sia false me ritorna la stringa senza l'ultima lettera
     return str.slice(1);
   } else {
     return str.slice(0, -1);
@@ -240,6 +246,7 @@ function deleteOne(str, booleano = true) {//imposto come parametri della funzion
 */
 
 function onlyLetters(str) {
+  //uso replace im modo da prendere tutti i caratteri numerici e sostituirli con un carattere nullo
   let noNumeri = str.replace(/[0-9]/g, "");
   return noNumeri;
 }
@@ -249,7 +256,7 @@ function onlyLetters(str) {
 */
 
 function isThisAnEmail(email) {
-  return email.indexOf("@") > 0 && email.indexOf(".") > 0;
+  return email.indexOf("@") > 0 && email.indexOf(".") > 0; //tramite index of verifico la presenza dei due caratteri necessari per l'e-mail
 }
 //console.log(isThisAnEmail('dino@google.com'));
 /* ESERCIZIO 7
@@ -257,8 +264,8 @@ function isThisAnEmail(email) {
 */
 
 function whatDayIsIt() {
-  let data = new Date();
-  return data.getDay();
+  let data = new Date(); //con new date prendo la data
+  return data.getDay(); //con get day prendo solo il giorno della data presa prima
 }
 
 /* ESERCIZIO 8
@@ -275,6 +282,7 @@ function whatDayIsIt() {
 */
 
 function rollTheDices(numero) {
+  //eseguo un ciclo e come numero di cicli imposto il parametro, poi prendo ogni tiro e li sommo all'interno di sum, ed il valore di ogni tiro lo metto all'interno di values tramite il push
   let result = {
     sum: 0,
     values: [],
@@ -293,22 +301,24 @@ function rollTheDices(numero) {
 */
 
 function howManyDays(data) {
+  //ottengo la data con new date e la imposto come data1, come data 2 mi prendo il valore del parametro e poi eseguo l'operazione prendendo i numeri interi e dividendoli con l'espressione dopo
   let data1 = new Date();
-  let data2 = data;
-  parseInt((data1 - data2) / (1000 * 60 * 60 * 24), 10); //presa da internet
+  let data2 = new Date(data);
+  return parseInt((data1 - data2) / (1000 * 60 * 60 * 24), 10);
 }
-
+//console.log(howManyDays('2020-02-06'));
 /* ESERCIZIO 10
   Scrivi una funzione chiamata "isTodayMyBirthday" che deve ritornare true se oggi è il tuo compleanno, falso negli altri casi.
 */
 function isTodayMyBirthday() {
   if (`${new Date().getDate()} ${new Date().getMonth()}` == "29 09") {
-    true;
+    return true; //mi prendo il mese ed il giorno corrente e li metto in una stringa, usando l'operatore di paragone verifico se sie uguale al compleanno, in tal caso imposto il ritorno a true altrimenti lo imposto a false
   } else {
-    false;
+    return false;
   }
 }
 //console.log(isTodayMyBirthday());
+
 // Arrays & Oggetti
 
 // NOTA: l'array "movies" usato in alcuni esercizi è definito alla fine di questo file
@@ -318,39 +328,129 @@ function isTodayMyBirthday() {
   in esso la proprietà chiamata come la stringa passata come secondo parametro.
 */
 
+let epicode = {
+  //creo l'oggetto e poi tramite delete con il parametro passato in funzione rimuovo la proprietà
+  corsi: 2,
+  alunni: 60,
+};
+function deleteProp(ogg = {}, str) {
+  delete ogg[str];
+  return ogg;
+}
+//console.log(deleteProp(epicode, 'corsi'));
 /* ESERCIZIO 12
   Scrivi una funzione chiamata "newestMovie" che trova il film più recente nell'array "movies" fornito.
 */
+
+function newestMovie() {
+  //metto il primo film della lista in una variabile in modo che dopo essermi ciclato tutti i film se l'anno del film preso in quel momento dal ciclo è superiore si sovrascrive la variabile con il film più recente
+  let film = movies[0];
+  for (let i = 0; i < movies.length; i++) {
+    {
+      if (movies[i].Year > film.Year) {
+        film = movies[i];
+      }
+    }
+  }
+  return film;
+}
+
+//console.log(newestMovie());
 
 /* ESERCIZIO 13
   Scrivi una funzione chiamata countMovies che ritorna il numero di film contenuti nell'array "movies" fornito.
 */
 
+function countMovies() {
+  //con length ottengo il numero di film nell'array
+  return movies.length;
+}
+//console.log(countMovies());
+
 /* ESERCIZIO 14
   Scrivi una funzione chiamata "onlyTheYears" che crea un array con solamente gli anni di uscita dei film contenuti nell'array "movies" fornito.
 */
+
+function onlyTheYears(item) {
+  //imposto la funzione per accedere alla proprietà anni
+  return [item.Year];
+}
+let anni = movies.map(onlyTheYears); //con map mi creo il nuvo array richiamando la funzione impostata prima
+//console.log(anni);
 
 /* ESERCIZIO 15
   Scrivi una funzione chiamata "onlyInLastMillennium" che ritorna solamente i film prodotto nel millennio scorso contenuti nell'array "movies" fornito.
 */
 
+function onlyInLastMillennium() {
+  //creo l'array vuoto e poi mi ciclo tutti i film, uso l'if per verificarne l'anno e poi uso il push per metterli nell'array
+  let vecchioMillennio = [];
+  for (let i = 0; i < movies.length; i++) {
+    if (movies[i].Year < 2000) {
+      vecchioMillennio.push(movies[i]);
+    }
+  }
+  return vecchioMillennio;
+}
+//console.log(onlyInLastMillennium());
 /* ESERCIZIO 16
   Scrivi una funzione chiamata "sumAllTheYears" che ritorna la somma di tutti gli anni in cui sono stati prodotti i film contenuti nell'array "movies" fornito.
 */
 
+function sumAllTheYears() {
+  //mi ciclo tutti i film e mi vado a prendere gli anni usando il parse int perchè sono scritti sotto forma di stringa e li sommo tra loro nella variabile
+  let somma = 0;
+  for (let x of movies) {
+    somma += parseInt(x.Year);
+  }
+  return somma;
+}
+//console.log(sumAllTheYears());
 /* ESERCIZIO 17
   Scrivi una funzione chiamata "searchByTitle" che riceve una stringa come parametro e ritorna i film nell'array "movies" fornito che la contengono nel titolo.
 */
 
+function searchByTitle(str) {
+  //mi ciclo i film e poi uso il metodo to upper case in modo da rendere la stringa di parametro e i titoli maiuscoli così che non mi dia problemi con il match che verifica se sono uguali e poi uso il push per metterli nell'array
+  let lista = [];
+  for (let i = 0; i < movies.length; i++) {
+    if (movies[i].Title.toUpperCase().match(str.toUpperCase())) {
+      lista.push(movies[i]);
+    }
+  }
+  return lista;
+}
+//console.log(searchByTitle('lord'));
 /* ESERCIZIO 18
   Scrivi una funzione chiamata "searchAndDivide" che riceve una stringa come parametro e ritorna un oggetto contenente due array: "match" e "unmatch".
   "match" deve includere tutti i film dell'array "movies" fornito che contengono la stringa fornita all'interno del proprio titolo, mentre "unmatch" deve includere tutti i rimanenti.
 */
 
+function searchAndDivide(str) {
+  let divisioneFilm = {
+    match: [], //uso la stessa logica dell'esercizio precedente solo che in caso di ugugaglianza li metto nella lista match altrimenti in unmatch
+    unmatch: [],
+  };
+  for (let i = 0; i < movies.length; i++) {
+    if (movies[i].Title.toUpperCase().match(str.toUpperCase())) {
+      divisioneFilm.match.push(movies[i]);
+    } else {
+      divisioneFilm.unmatch.push(movies[i]);
+    }
+  }
+  return divisioneFilm;
+}
+//console.log(searchAndDivide('avengers'));
+
 /* ESERCIZIO 19
   Scrivi una funzione chiamata "removeIndex" che riceve un numero come parametro e ritorna l'array "movies" fornito privo dell'elemento nella posizione ricevuta come parametro.
 */
 
+function removeIndex(number) {
+  movies.splice(number, 1);
+  return movies;
+}
+//console.log(removeIndex(3));
 // DOM (nota: gli elementi che selezionerai non si trovano realmente nella pagina)
 
 /* ESERCIZIO 20
@@ -379,7 +479,7 @@ function stampaConsole() {
   for (let i = 0; i < testi.length; i++) {
     console.log(testi[i].textContent);
   }
-//eseguo un ciclo for per stampare in console tutti i testi al loro interno
+  //eseguo un ciclo for per stampare in console tutti i testi al loro interno
 }
 //stampaConsole();
 /* ESERCIZIO 23
@@ -392,7 +492,7 @@ function coloreLink() {
   for (let i = 0; i < links.length; i++) {
     links[i].style.backgroundColor = "red";
   }
-//eseguo un ciclo for per attribuire ad ogni link un colore di background rosso
+  //eseguo un ciclo for per attribuire ad ogni link un colore di background rosso
 }
 //coloreLink();
 /* ESERCIZIO 24
@@ -460,10 +560,10 @@ function aggiungiClasse() {
 */
 
 function isItPrime(number) {
-  //creo la funzione e gli attribuisco il parametro number
+  //creo la funzione e gli attribuisco come parametro il numero da verificare
   for (let i = 2; i < number; i++) {
     //eseguo un ciclo for e lo faccio partire da 2 perchè è
-    //il primo numero con cui provare a dividere il paarametro in modo da verificare che sia un numero primo
+    //il primo numero con cui provare a dividere il parametro in modo da verificare che sia un numero primo
     if (number % i != 0) {
       //uso un if così in caso il risultato del modulo sia diverso da zero mi ritorna in console true
       return true;
@@ -472,5 +572,4 @@ function isItPrime(number) {
     }
   }
 }
-
-//console.log(isItPrime(8));
+//console.log(isItPrime(4))
