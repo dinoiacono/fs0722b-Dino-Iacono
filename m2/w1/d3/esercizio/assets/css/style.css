@@ -1,18 +1,116 @@
+/* RESET */
+
+h2, h3{
+    margin: 0; 
+    color: rgb(116, 35, 5);
+    font-family: sans-serif;
+}
+
+p{
+    margin: 0;
+    color: rgb(116, 35, 5); 
+    font-family: sans-serif;
+}
+
+h1{
+    color: rgb(116, 35, 5);
+    font-family: sans-serif;
+}
+
 body{
     margin: 0;
 }
+
+main{
+    margin: 0 20px;
+}
+
+/* HEADER */
 
 header{
     background-color: rgb(255, 247, 227);
 }
 
-#main-menu{
-    margin: 0;
-    list-style-type: none;
+#menu{
     display: flex;
-    align-items: center;
+    justify-content: space-around;
+    padding: 25px;
 }
 
-#logo{
-    width: 15%;
+#menu div{
+    padding: 15px;
+    background-color: rgb(255, 223, 134 );
+    border-radius: 50px;
+    
+}
+
+
+/* CARTE */
+.carte{
+    display: flex;
+    flex-wrap: wrap;
+   justify-content: space-between;
+   margin-bottom: 60px;
+}
+
+.carta{
+    display: flex;
+    flex-direction: column;
+    width: 45%;
+    border-radius: 60px;
+    overflow: hidden;
+    background-color: rgb(255, 247, 227);
+    margin-bottom: 20px;
+}
+
+.foto-miele{
+    width: 100%;
+    height: 60%;
+}
+
+.testi_card{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+article button{
+    margin: 0 auto;
+    margin-bottom: 20px;
+    width: 50%;
+    height: 30px;
+    background-color: rgb(255, 223, 134 );
+    border: 0px;
+    border-radius: 15px;
+    color: rgb(116, 35, 5);
+    font-family: sans-serif;
+}
+
+/* ARTICOLO */
+
+.notizie h2{
+    margin-bottom: 20px;
+}
+
+#articolo{
+    width: 100%;
+    background-color: rgb(255, 247, 227);
+    border-radius: 30px;
+    overflow: hidden;
+}
+
+#cont-articolo{
+    display: flex;
+    flex-direction: column;
+    padding: 40px;
+}
+
+#cont-articolo h3{
+    margin-bottom: 25px;
+}
+
+#cont-articolo p{
+    margin-bottom: 25px;
 }
