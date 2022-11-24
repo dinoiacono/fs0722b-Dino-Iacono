@@ -10,14 +10,15 @@
 .containerPrinc{
 	width: 80%;
 	position: relative;
-	margin: 110px auto 0 auto;
-	padding: 10px;
+	margin: 0 auto;
+	margin-top: 250px;
+	padding: 40px;
 	font-family: sans-serif;
+	border: dashed 3px grey;
 }
 .contTesto{
 	margin: 0;
 	text-align: left;
-	text-shadow: 1px 1px 1px rgba(255,255,255,0.8);
 }
 .contTesto span{
 	color: #444;
