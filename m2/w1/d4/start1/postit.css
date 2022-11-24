@@ -1,0 +1,83 @@
+body{
+   background-color: blueviolet;
+}
+.container{
+    width: 80%;
+    margin: 0 auto;
+    font-size: 14px;
+    padding-top: 5px;
+    margin-top: 300px;
+}
+#lista{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    display: flex;
+}
+li h2{
+    margin-bottom: 30px;
+    margin-top: 10px;
+    font-size: 20px;
+}
+li p{
+    margin-top: 40px;
+}
+#lista li{
+    text-align: center;
+    margin: 0;
+    color: black;
+    height: 140px;
+    width: 25%;
+    display: block;
+    font-size: 15px;
+    margin-right: 50px;
+    margin-top: 35px;
+    animation-name: muovi;
+    animation-duration: 0.5s;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+    
+}
+@keyframes muovi {
+    0% {transform:scale(0.0) rotate(0deg) ;}
+    100% {transform: scale(1.0) rotate(360deg);}
+}
+
+#lista li:hover{
+    z-index: 5;
+    transform: scale(1.5) rotate(0deg);
+    
+    color: black;
+    text-shadow: 1px 1px 1px violet;
+}
+#post1{
+    background: linear-gradient(90deg, rgba(242,223,82,1) 12%, rgba(249,187,0,1) 68%);
+    transform: rotate(10deg);
+}
+#post2{
+    background: linear-gradient(90deg, rgba(117,255,112,1) 12%, rgba(58,186,41,1) 68%);
+    transform: rotate(-10deg);
+}
+#post3{
+    background:linear-gradient(90deg, rgba(194,133,251,1) 12%, rgba(176,85,255,1) 68%);
+    transform: rotate(5deg);
+}
+#post4{
+    background: linear-gradient(90deg, rgba(117,255,112,1) 12%, rgba(58,186,41,1) 68%);
+    transform: rotate(-10deg);
+}
+#post5{
+    background: linear-gradient(90deg, rgba(242,223,82,1) 12%, rgba(249,187,0,1) 68%);
+    transform: rotate(10deg);
+}
+#post6{
+    background: linear-gradient(90deg, rgba(194,133,251,1) 12%, rgba(176,85,255,1) 68%);
+    transform: rotate(-5deg);
+}
+#post7{
+    background: linear-gradient(90deg, rgba(242,223,82,1) 12%, rgba(249,187,0,1) 68%);
+    transform: rotate(10deg);
+}
+#post8{
+    background: linear-gradient(90deg, rgba(117,255,112,1) 12%, rgba(58,186,41,1) 68%);
+}
