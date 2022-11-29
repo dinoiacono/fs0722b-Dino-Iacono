@@ -1,0 +1,11 @@
+#slogan h1{
+    margin-block-start: 0;
+    margin-block-end: 0;
+    color: grey;
+}
+#slogan p{
+    margin-block-start: 0;
+    margin-block-end: 0;
+
+    color: lightgrey;
+}
