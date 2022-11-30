@@ -1,15 +1,40 @@
-@import 'variabili';
-@import 'bottone';
-body{
-    background-color: $colore-body;
+@import "variabili";
+@import "bottone";
+body {
+  background-color: $colore-body;
+  color: $colore-scritte;
 }
-header{
-    width: $larghezza-header;
-    background-color: $colore-header;
-    h1{
-        text-align: center;
+h1 {
+  font-size: $grandezza-h1;
+}
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  ul {
+    display: flex;
+    list-style-type: none;
+    li {
+      margin-left: 20px;
     }
+    a {
+      text-decoration: none;
+      color: $colore-scritte;
+      &:hover {
+        color: $colore-hover;
+      }
+    }
+  }
 }
-img{
-    width: $larghezza-img;
+.contenitore {
+  width: $larghezza-contenitore;
+  margin: $centrato;
+}
+main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  img {
+    border-radius: 100px;
+  }
 }
