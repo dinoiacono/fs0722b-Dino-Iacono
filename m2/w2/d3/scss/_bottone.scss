@@ -1,0 +1,7 @@
+button{
+    background-color: $colre-bottone;
+    color: $colore-scritta-bottone;
+    &:hover{
+        background-color: $colore-hover;
+    }
+}

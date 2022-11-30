@@ -1,0 +1,15 @@
+@import 'variabili';
+@import 'bottone';
+body{
+    background-color: $colore-body;
+}
+header{
+    width: $larghezza-header;
+    background-color: $colore-header;
+    h1{
+        text-align: center;
+    }
+}
+img{
+    width: $larghezza-img;
+}
