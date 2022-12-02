@@ -1,0 +1,32 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;500&display=swap");
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+header {
+  color: #fff;
+}
+
+.main-menu {
+  margin-bottom: 0;
+  padding-left: 0;
+}
+.main-menu li {
+  list-style-type: none;
+  margin-left: 10px;
+}
+.main-menu li a {
+  text-decoration: none;
+  color: #fff;
+}
+
+#motto {
+  background-image: url("../img/pexels-aleksandar-pasaric-325185.jpg");
+  background-size: cover;
+  background-position: center center;
+  height: 550px;
+}
+
+#txt-motto {
+  padding-top: 30px;
+}/*# sourceMappingURL=style.css.map */
