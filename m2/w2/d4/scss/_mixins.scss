@@ -1,0 +1,16 @@
+@mixin menu {
+    display: flex;
+    font-style: italic;
+    li{
+        list-style-type: none;
+        margin-left: 15px;
+        &:active{
+            text-decoration: underline;
+        }
+        a{
+            text-decoration: none;
+            color: #fff;
+        }
+    }
+}
+

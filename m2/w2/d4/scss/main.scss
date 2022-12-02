@@ -1,0 +1,33 @@
+@import "var";
+@import "header";
+@import "aside";
+@import "footer";
+@import "mixins";
+
+.main-menu{
+    @include menu;
+}
+
+.sezione-principale{
+    display: flex;
+    width:80%;
+    margin: 0 auto;
+        section{
+            width: 70%;
+        }
+        aside{
+            width: 30%;
+        }
+}
+
+.menu-laterale{
+    @include menu;
+    flex-direction: column;
+    li{
+        border-bottom: dashed 1px grey;
+        padding: 5px;
+       a{
+        color: black;
+       }
+    }
+}
