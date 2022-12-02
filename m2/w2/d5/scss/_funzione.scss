@@ -1,0 +1,7 @@
+@function set-colore($lum){
+    @if $lum >= 50{
+        @return blue;
+    }  @else {
+        @return black;
+    }
+}
