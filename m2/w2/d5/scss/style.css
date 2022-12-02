@@ -48,18 +48,18 @@ body {
 
 header {
   color: #fff;
-  background-color: black;
+  background-color: blue;
 }
 
 footer {
-  background-color: black;
+  background-color: blue;
 }
 
 .btn {
-  background-color: black;
+  background-color: blue;
 }
 .btn:hover {
-  background-color: black;
+  background-color: blue;
 }
 
 .main-menu {
