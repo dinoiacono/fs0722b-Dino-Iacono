@@ -1,0 +1,9 @@
+<div *ngIf="show;else caricamento">
+  <input #newTodo (keyup.enter)="aggiungi(newTodo.value); newTodo.value='' ">
+  <button type="button" (click)="aggiungi(newTodo.value); newTodo.value='' ">Add</button>
+</div>
+
+
+<ng-template #caricamento>
+  <div>Caricamento...</div>
+</ng-template>

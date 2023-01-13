@@ -1,0 +1,19 @@
+<div *ngIf="show;else caricamento">
+  <div *ngIf="todo.length>0;else noLavoro">
+    <div class="card my-2 w-50" *ngFor="let t of todo">
+      <div class="card-body">
+        <h3>{{t.title}}</h3>
+        <p>{{t.completed}}</p>
+        <button (click)="todoDelete(t.id)">Elimina</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<ng-template #caricamento>
+  <div>Caricamento...</div>
+</ng-template>
+
+<ng-template #noLavoro>
+  <div>Non ci sono Task</div>
+</ng-template>
