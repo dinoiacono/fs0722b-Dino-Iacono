@@ -1,19 +1,18 @@
 <div *ngIf="show;else caricamento">
-  <div *ngIf="todo.length>0;else noLavoro">
-    <div class="card my-2 w-50" *ngFor="let t of todo">
-      <div class="card-body">
-        <h3>{{t.title}}</h3>
-        <p>{{t.completed}}</p>
-        <button (click)="todoDelete(t.id)">Elimina</button>
+  <div *ngIf="todo.length>0;else noTasks" class="row">
+    <div class="card text-align-center my-2 col-4 col-md-3 align-items-center bg-danger" *ngFor="let t of todo">
+      <div class="card-body d-flex flex-column align-items-center">
+        <h3>{{t.title | uppercase}}</h3>
+        <button class="btn btn-success mx-auto" (click)="todoDelete(t.id)">Fatto<i class="bi bi-check2-circle"></i></button>
       </div>
     </div>
   </div>
 </div>
 
 <ng-template #caricamento>
-  <div>Caricamento...</div>
+  <div><p class="text-center fs-3">Caricamento<i class="bi bi-hourglass-split"></i></p> </div>
 </ng-template>
 
-<ng-template #noLavoro>
-  <div>Non ci sono Task</div>
+<ng-template #noTasks>
+  <div><p class="text-center fs-3">Non ci sono Task</p></div>
 </ng-template>

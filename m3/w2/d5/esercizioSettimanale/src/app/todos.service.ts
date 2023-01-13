@@ -31,5 +31,7 @@ export class TodosService {
   addTodo(testo:string): void{
     if (this.todo.length > 0) this.id = this.todo[this.todo.length - 1].id + 1
     this.todo.push({id: this.id, title: testo, completed: false})
+
+
   }
 }

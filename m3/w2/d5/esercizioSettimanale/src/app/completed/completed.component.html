@@ -1,20 +1,19 @@
 <div *ngIf="show;else caricamento">
-	<div *ngIf="completed.length>0;else noLavoro">
-	<div class="card my-2 w-50" *ngFor="let t of completed" >
+	<div *ngIf="completed.length>0;else taskFatte" class="row">
+	<div class="card my-2 text-align-center col-4 col-md-3 align-items-center bg-success" *ngFor="let t of completed" >
 		<div class="card-body">
-			<h3>{{t.title}}</h3>
-			<p>{{t.completed}}</p>
-			<button (click)="reset(t.id)">Ripristina</button>
-			<button (click)="remove(t.id)">Elimina</button>
+			<h3 class="text-center">{{t.title | uppercase}}</h3>
+			<button class="btn btn-secondary" (click)="reset(t.id)">Ripristina</button>
+			<button class="btn btn-danger" (click)="remove(t.id)">Elimina</button>
 		</div>
 	</div>
 	</div>
 </div>
 
 <ng-template #caricamento>
-	<div>Caricamento...</div>
+	<div><p class="text-center fs-3">Caricamento<i class="bi bi-hourglass-split"></i></p></div>
 </ng-template>
 
-<ng-template #noLavoro>
-	<div>Hai completato tutte le task</div>
+<ng-template #taskFatte>
+	<div><p class="text-center fs-3">Hai completato tutte le task!</p></div>
 </ng-template>

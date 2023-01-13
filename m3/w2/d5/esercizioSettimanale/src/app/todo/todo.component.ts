@@ -33,6 +33,7 @@ export class TodoComponent implements OnInit {
   todoDelete(id: number){
     this.tdServ.editTodo(id)
     this.todo = this.todo.filter(p=>p.id!=id)
+    alert('TASK FATTA!')
   }
 
 

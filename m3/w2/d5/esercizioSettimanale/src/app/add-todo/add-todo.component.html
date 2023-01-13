@@ -1,9 +1,8 @@
-<div *ngIf="show;else caricamento">
-  <input #newTodo (keyup.enter)="aggiungi(newTodo.value); newTodo.value='' ">
-  <button type="button" (click)="aggiungi(newTodo.value); newTodo.value='' ">Add</button>
+<div *ngIf="show;else caricamento" class="d-flex justify-content-center">
+  <input #newTodo (keyup.enter)="aggiungi(newTodo.value); newTodo.value='' " placeholder="Scrivi qui la tua task...">
+  <button class="btn btn-success" type="button" (click)="aggiungi(newTodo.value); newTodo.value='' ">Add</button>
 </div>
 
-
 <ng-template #caricamento>
-  <div>Caricamento...</div>
+  <p class="text-center fs-3">Caricamento<i class="bi bi-hourglass-split"></i></p>
 </ng-template>

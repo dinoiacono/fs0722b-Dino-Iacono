@@ -31,11 +31,13 @@ export class CompletedComponent implements OnInit {
   remove(id:number){
     this.tdServ.remove(id)
     this.completed = this.completed.filter(p=>p.id!=id)
+    alert('TASK RIMOSSA!')
   }
 
   reset(id: number){
     this.tdServ.editTodo(id)
     this.completed = this.completed.filter(p=>p.id!=id)
+    alert('TASK RIPRISTINATA!')
   }
 
 

@@ -22,6 +22,7 @@ export class AddTodoComponent implements OnInit {
 
 	aggiungi(testo: string) {
 		if (testo) this.tdServ.addTodo(testo)
+        alert('TASK AGGIUNTA!')
 	}
 
 }

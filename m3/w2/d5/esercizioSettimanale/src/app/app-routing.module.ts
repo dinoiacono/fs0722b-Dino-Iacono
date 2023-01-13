@@ -5,7 +5,10 @@ import { CompletedComponent } from './completed/completed.component';
 import { AddTodoComponent } from './add-todo/add-todo.component';
 import { HomeComponent } from './home/home.component';
 
-const routes: Routes = [{
+const routes: Routes = [  {
+    path: 'home',
+    component: HomeComponent
+  },{
     path: 'todo',
     component: TodoComponent
   },
@@ -13,10 +16,7 @@ const routes: Routes = [{
     path: 'completed',
     component: CompletedComponent
   },
-  {
-    path: 'home',
-    component: HomeComponent
-  },
+
   {
     path: '**',
     component: HomeComponent
