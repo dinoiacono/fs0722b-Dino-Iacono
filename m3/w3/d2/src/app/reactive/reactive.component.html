@@ -1,52 +1,52 @@
+<h2>Reactive form</h2>
 <form [formGroup]="formEroi" (ngSubmit)="onSubmit()">
-  <div class="form-group">
-      <p for="exampleFormControlInput1">Nome</p>
-      <input type="text" class="form-control" id="exampleFormControlInput1" formControlName="nome">
-  </div>
-  <div class="form-group">
-      <label for="exampleFormControlInput1">AlterEgo</label>
-      <input type="text" class="form-control" id="exampleFormControlInput1" formControlName="alter">
-  </div>
-  <div formArrayName="potere" class="mb-3 mt-3">
-      <h3>Super Poteri</h3>
-      <button type="button" class="btn btn-success" (click)="addPotere()">Aggiungi Potere</button>
-      <div class="form-group mb-2" *ngFor="let pot of getPotere(); let i = index">
-          <input type="text" class="form-control" [formControlName]="i">
-      </div>
-  </div>
-  <div class="form-group">
-      <label for="exampleFormControlInput1">Nemico</label>
-      <input type="text" class="form-control" id="exampleFormControlInput1" formControlName="nemico">
-  </div>
-  <div class="form-group">
-      <label for="exampleFormControlInput1">Pianeta</label>
-      <input type="text" class="form-control" id="exampleFormControlInput1" formControlName="pianeta">
-  </div>
-  <div formArrayName="debolezza" class="mb-3 mt-3">
-      <h3>Debolezza</h3>
-      <button type="button" class="btn btn-success" (click)="addDebolezza()">Aggiungi Debolezza</button>
-      <div class="form-group mb-2" *ngFor="let deb of getDebolezza(); let x = index">
-          <input type="text" class="form-control" [formControlName]="x">
-      </div>
-  </div>
+	<div class="form-group">
+		<p for="exampleFormControlInput1">Nome</p>
+		<input type="text" class="form-control" id="exampleFormControlInput1" formControlName="nome">
+	</div>
+	<div class="form-group">
+		<label for="exampleFormControlInput1">AlterEgo</label>
+		<input type="text" class="form-control" id="exampleFormControlInput1" formControlName="alter">
+	</div>
+	<div formArrayName="potere" class="mb-3 mt-3">
+		<h3>Super Poteri</h3>
+		<button type="button" class="btn btn-success" (click)="addPotere()">Aggiungi Potere</button>
+		<div class="form-group mb-2" *ngFor="let pot of getPotere(); let i = index">
+			<input type="text" class="form-control" [formControlName]="i">
+		</div>
+	</div>
+	<div class="form-group">
+		<label for="exampleFormControlInput1">Nemico</label>
+		<input type="text" class="form-control" id="exampleFormControlInput1" formControlName="nemico">
+	</div>
+	<div class="form-group">
+		<label for="exampleFormControlInput1">Pianeta</label>
+		<input type="text" class="form-control" id="exampleFormControlInput1" formControlName="pianeta">
+	</div>
+	<div formArrayName="debolezza" class="mb-3 mt-3">
+		<h3>Debolezza</h3>
+		<button type="button" class="btn btn-success" (click)="addDebolezza()">Aggiungi Debolezza</button>
+		<div class="form-group mb-2" *ngFor="let deb of getDebolezza(); let x = index">
+			<input type="text" class="form-control" [formControlName]="x">
+		</div>
+	</div>
 
-  <button type="submit" class="btn btn-primary" [disabled]="!formEroi.valid">Submit</button>
+	<button type="submit" class="btn btn-primary" [disabled]="!formEroi.valid">Submit</button>
 
 </form>
 
 <div *ngFor="let e of eroi">
-  <div class="card" style="width: 18rem;">
-    <div class="card-body">
-      <h5 class="card-title">{{e.nome}}</h5>
-      <ul>
-        <li>Alterego: {{e.alter}}</li>
-        <li>Pianeta:{{e.pianeta}}</li>
-        <li>Nemico: {{e.nemico}}</li>
-        <li>Poteri: <span *ngFor="let p of e.potere"> {{p | uppercase}} </span></li>
-        <li>Debolezze: <span *ngFor="let d of e.debolezza"> {{d | uppercase}} </span></li>
-      </ul>
-      <!-- <p class="card-text">{{e.alter}} - {{e.pianeta}} - <span *ngFor="let p of e.potere"> {{p}}, </span> - {{e.nemico}} - <span *ngFor="let d of e.debolezza"> {{d}}, </span> </p> -->
-    </div>
-  </div>
+	<div class="card" style="width: 18rem;">
+		<div class="card-body">
+			<h5 class="card-title">{{e.nome}}</h5>
+			<ul>
+				<li>Alterego: {{e.alter}}</li>
+				<li>Pianeta:{{e.pianeta}}</li>
+				<li>Nemico: {{e.nemico}}</li>
+				<li>Poteri: <span *ngFor="let p of e.potere"> {{p | uppercase}} </span></li>
+				<li>Debolezze: <span *ngFor="let d of e.debolezza"> {{d | uppercase}} </span></li>
+			</ul>
+		</div>
+	</div>
 </div>
 
