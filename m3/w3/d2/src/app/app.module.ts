@@ -6,12 +6,14 @@ import { AppComponent } from './app.component';
 import { ReactiveComponent } from './reactive/reactive.component';
 import { DrivenFormComponent } from './td/td.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { NavbarComponent } from './navbar/navbar.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ReactiveComponent,
     DrivenFormComponent,
+    NavbarComponent,
   ],
   imports: [
     BrowserModule,
