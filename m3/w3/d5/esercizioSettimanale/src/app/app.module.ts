@@ -8,6 +8,7 @@ import { SubscribeComponent } from './components/subscribe/subscribe.component';
 import { HomeComponent } from './components/home/home.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { FilmComponent } from './components/film/film.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { FilmComponent } from './components/film/film.component';
     SubscribeComponent,
     HomeComponent,
     NavbarComponent,
-    FilmComponent
+    FilmComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
