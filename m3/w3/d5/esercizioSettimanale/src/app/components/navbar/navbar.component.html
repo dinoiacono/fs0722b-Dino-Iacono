@@ -15,11 +15,9 @@
                     Bentornato, {{utente.nome|uppercase}} <i class="bi bi-person-circle fs-5" ></i>
                     </a>
                 <ul class="dropdown-menu text-small">
-                    <li><a class="dropdown-item disabled" href="#">Impostazioni</a></li>
-                    <li><a class="dropdown-item disabled" href="#">Abbonamento</a></li>
                     <li><a class="dropdown-item " routerLink="/my-profile">Profile</a></li>
                     <li><hr class="dropdown-divider"></li>
-                    <li><a class="dropdown-item" (click)="esci()">Esci</a></li>
+                    <li><a class="dropdown-item" (click)="logout()">Esci</a></li>
                 </ul>
             </div>
 		</div>

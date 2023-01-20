@@ -27,7 +27,7 @@ export class NavbarComponent implements OnInit {
 		})
 	}
 
-    esci(){
+    logout(){
         this.as.logout()
     }
 }

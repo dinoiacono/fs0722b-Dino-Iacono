@@ -23,6 +23,12 @@
       "password": "$2a$10$Mg8j8AH3TyQjMYq85BI.8OHepWMLNtXunKmLTatqmMuIEdL2CvvNC",
       "nome": "Marco",
       "id": 7
+    },
+    {
+      "email": "silvia@prova.com",
+      "password": "$2a$10$GXzpiPiASs.T52R7s0AyWeGnfVSC2rUlWDORwdUA/UCf/iJYKosOO",
+      "nome": "Silvia ",
+      "id": 8
     }
   ],
   "favorites": [],
