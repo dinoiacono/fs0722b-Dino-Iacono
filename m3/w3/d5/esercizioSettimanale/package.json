@@ -1,5 +1,5 @@
 {
-  "name": "esercizio-settimanale",
+  "name": "netflix",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
@@ -7,7 +7,7 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "backend": "json-server-auth --watch db.json --routes routes.json --port 4201",
+    "backend": "json-server-auth --watch src/server/db.json --routes src/server/routes.json --port 4201",
     "full-stack": "concurrently \"npm run backend\" \"npm run start\""
   },
   "private": true,
@@ -20,10 +20,11 @@
     "@angular/platform-browser": "^14.2.0",
     "@angular/platform-browser-dynamic": "^14.2.0",
     "@angular/router": "^14.2.0",
-    "@auth0/angular-jwt": "^5.1.2",
+    "@auth0/angular-jwt": "5.1.2",
     "concurrently": "^7.6.0",
-    "json-server": "^0.17.1",
+    "jsonwebtoken": "^9.0.0",
     "json-server-auth": "^2.1.0",
+    "json-server": "^0.17.1",
     "rxjs": "~7.5.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.11.4"

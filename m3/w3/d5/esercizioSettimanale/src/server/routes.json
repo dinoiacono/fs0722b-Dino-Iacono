@@ -4,6 +4,6 @@
   "/movie/popular/:id": "/movies-popular/:id",
   "/movie/top_rated": "/movies-toprated",
   "/reset": "/reset",
-  "movies-popular": 660,
+  "movies-popular": 664,
   "movies-toprated": 660
 }

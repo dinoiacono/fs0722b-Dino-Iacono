@@ -1,9 +1,30 @@
-<div class="row flex-wrap ">
-    <div class="card my-2 mx-auto px-0" style="width: 19%;">
-        <img src="..." class="card-img-top" alt="...">
-        <div class="card-body">
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <i class="bi bi-heart-fill text-danger"></i>
+<div class="card" style="width: 18rem;">
+  <img src="https://image.tmdb.org/t/p/w500/{{film.poster_path}}" class="card-img-top cover" alt="Copertina {{film.title}}">
+  <div class="card-body">
+    <!-- <h5 class="card-title">{{film.title}}</h5> -->
+    <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
+    <div class="d-flex justify-content-center py-2">
+        <button class="btn btn-dark mx-3" [ngClass]="liked ? 'like' : 'notliked'" (click)="likeToggle(film.id)"><i class="bi bi-heart-fill"></i></button>
+        <button type="button" class="btn btn-dark mx-3" data-bs-toggle="modal" data-bs-target="#modaleFilm"><i class="bi bi-play-fill"></i></button>
+    </div>
+  </div>
+</div>
+
+    <div class="modal fade" id="modaleFilm" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-xl">
+            <div class="modal-content">
+                <!-- <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">{{film.title}}</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div> -->
+                <div class="modal-body d-flex justify-content-center py-5 ">
+                    <img src="https://image.tmdb.org/t/p/w500/{{film.poster_path}}" alt="">
+                    <div class="px-5">
+                        <h3>{{film.title}}</h3>
+                        <p></p>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
-</div>
+
