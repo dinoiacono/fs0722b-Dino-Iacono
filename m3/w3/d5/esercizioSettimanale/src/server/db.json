@@ -7,15 +7,15 @@
       "id": 4
     },
     {
-      "email": "ric@prova.com",
+      "email": "dino@prova.com",
       "password": "$2a$10$CQ6vGc3LQ8CTLEioNfAE1.OnZPPz/wp9zRhNzY6Zbo4H1gvbdlIdS",
-      "nome": "prova",
+      "nome": "dino",
       "id": 5
     },
     {
-      "email": "test@test.com",
+      "email": "prova@test.com",
       "password": "$2a$10$i6hmuWCjutchUXEq1jnTveI1YQQIsSM1uDrBHgdXcxioSqQoDtMCC",
-      "nome": "test",
+      "nome": "prova",
       "id": 6
     },
     {
@@ -25,28 +25,7 @@
       "id": 7
     }
   ],
-  "favorites": [
-    {
-      "userId": 5,
-      "movieId": 567189,
-      "id": 1
-    },
-    {
-      "userId": 5,
-      "movieId": 578701,
-      "id": 2
-    },
-    {
-      "userId": 5,
-      "movieId": 632357,
-      "id": 3
-    },
-    {
-      "userId": 5,
-      "movieId": 717192,
-      "id": 4
-    }
-  ],
+  "favorites": [],
   "genres": [
     {
       "id": 28,

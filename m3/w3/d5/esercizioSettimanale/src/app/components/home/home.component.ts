@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { AuthService } from 'src/app/auth/auth.service';
+import { Utente } from 'src/app/interfaces/utente.interface';
 
 @Component({
   selector: 'app-home',
@@ -7,9 +9,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+logged = false;
+utente: Utente = {email: '',nome: '',id: 0};
 
-  ngOnInit(): void {
-  }
+    constructor(private as:AuthService) { }
+
+    ngOnInit(): void {
+		this.as.authObs.subscribe((res)=>{
+			if(res) {
+				this.logged = true
+				this.utente = res.user
+			} else {
+				this.logged = false,
+				this.utente = {email: '',nome: '',id: 0}
+			}
+		})
+	}
 
 }

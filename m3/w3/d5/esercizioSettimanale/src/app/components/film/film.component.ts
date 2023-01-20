@@ -33,8 +33,6 @@ export class FilmComponent implements OnInit {
             this.fs.postLike(id, this.user).subscribe(() =>{
                 this.liked = true
             })
-        } else {
-            this.fs.removeLike(id, this.user.user.id)
         }
     }
 
