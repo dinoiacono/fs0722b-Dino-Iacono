@@ -1,10 +1,8 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { environment } from 'src/environments/environment';
-import { FetchedPost, Post } from '../interfaces/post.interface';
+import { ModificaPost, NuovoPost, Post } from '../interfaces/post.interface';
 import { map } from 'rxjs/operators';
-
-
 
 @Injectable({
   providedIn: 'root'
@@ -14,23 +12,22 @@ export class PostService {
   constructor(private http:HttpClient) { }
 
   url:string = environment.url
+  isLogged: boolean = false
 
   getPost(){
-    return this.http.get<FetchedPost>(`${this.url}`).pipe(map((res) => {
-      return res.posts
-    }))
+    return this.http.get<Post[]>(`${this.url}`)
   }
 
   getPostbyID(postID:number){
     return this.http.get<Post>(`${this.url}/${postID}`)
   }
 
-  nuovoPost(){
-
+  nuovoPost(articolo:NuovoPost){
+    return this.http.post(`${this.url}`, articolo)
   }
 
-  modificaPost(){
-
+  modificaPost(articolo:ModificaPost){
+    return this.http.put(`${this.url}/${articolo.id}`, articolo)
   }
 
   eliminaPost(postID:number){

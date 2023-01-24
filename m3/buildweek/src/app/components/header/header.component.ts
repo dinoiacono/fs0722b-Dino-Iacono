@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { NgForm } from '@angular/forms';
+import { PostService } from 'src/app/services/post.service';
 
 @Component({
   selector: 'app-header',
@@ -7,9 +9,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor() { }
+  constructor(public ps:PostService) { }
 
   ngOnInit(): void {
+  }
+
+  accedi(f:NgForm){
+    if(f.value.username == 'admin' && f.value.password == 'admin'){
+      this.ps.isLogged = true
+    }else{
+      this.ps.isLogged = false
+    }
+  }
+
+  logout(){
+    this.ps.isLogged = false
   }
 
 }

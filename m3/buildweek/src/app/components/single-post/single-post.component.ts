@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
+import { ActivatedRoute } from '@angular/router';
 import { Post } from 'src/app/interfaces/post.interface';
 import { PostService } from 'src/app/services/post.service';
 
@@ -10,7 +10,7 @@ import { PostService } from 'src/app/services/post.service';
 })
 export class SinglePostComponent implements OnInit {
 
-	constructor( private route: ActivatedRoute, private router: Router,private ps:PostService) {}
+	constructor( private route: ActivatedRoute,private ps:PostService) {}
 
 	post!: Post
 

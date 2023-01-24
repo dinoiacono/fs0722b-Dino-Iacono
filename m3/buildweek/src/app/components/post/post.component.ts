@@ -9,14 +9,7 @@ import { Post } from 'src/app/interfaces/post.interface';
 })
 export class PostComponent implements OnInit {
 
-  @Input() post: Post = {
-    id: 0,
-    title: '',
-    body: '',
-    userId: 0,
-    tags: [],
-    reactions: 0
-  }
+  @Input() post!: Post
 
   constructor(private router:Router) { }
 

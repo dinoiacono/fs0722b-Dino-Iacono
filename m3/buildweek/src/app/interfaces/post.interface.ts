@@ -1,15 +1,20 @@
 export interface Post {
-    id: number;
-    title: string,
-    body: string,
-    userId: number,
-    tags: string[],
-    reactions: number
+  title: string,
+  body: string,
+  imgUrl: string,
+  id: number,
+  userId: number
 }
 
-export interface FetchedPost {
-  posts: Post[],
-  total: number,
-  skip: number,
-  limit: number
+export interface ModificaPost{
+  id: number,
+  title: string,
+  body: string
+}
+
+export interface NuovoPost{
+  title: string,
+  body: string,
+  imgUrl: string,
+  userId: number
 }

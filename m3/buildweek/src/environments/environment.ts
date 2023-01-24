@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  url: "https://dummyjson.com/posts"
+  url: "https://63ceda62d2e8c29a9be01adc.mockapi.io/api/posts"
 };
 
 /*

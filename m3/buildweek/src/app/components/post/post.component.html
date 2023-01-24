@@ -1,5 +1,5 @@
 <div class="card shadow my-3 mx-2 altezza">
-  <img src="https://picsum.photos/300" alt="">
+  <img src="{{post.imgUrl}}" alt="">
 	<div class="card-body">
 		<h3 class="card-title">{{post.title}}</h3>
 		<p class="card-text">{{ (post.body.length>100) ? ( post.body | slice:0:100)+'...' : (post.body) }}</p>
@@ -7,7 +7,6 @@
 			<div class="btn-group">
 				<button type="button" class="btn btn-sm btn-outline-secondary" (click)="goToPage(post.id)">Scopri di più</button>
 			</div>
-      <!-- <small class="text-muted">9 mins</small> -->
 		</div>
 	</div>
 </div>
