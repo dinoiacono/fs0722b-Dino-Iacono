@@ -16,7 +16,7 @@
 							Archivio
 						</a>
           </li>
-          <li *ngIf="this.ps.isLogged">
+          <li *ngIf="this.as.isLogged">
             <div class="dropdown">
               <a class="btn btn-light dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                 Admin
@@ -33,7 +33,7 @@
 			</div>
 		</div>
 	</div>
-	<div class="px-3 py-2 border-bottom mb-3" *ngIf="!this.ps.isLogged">
+	<div class="px-3 py-2 border-bottom mb-3 bg-light" *ngIf="!this.as.isLogged">
 		<div class="container d-flex flex-wrap justify-content-end">
 
 			<div class="text-end">
@@ -70,13 +70,33 @@
 			</div>
 		</div>
 	</div>
-	<div *ngIf="this.ps.isLogged" class="border-bottom my-2">
+	<div *ngIf="this.as.isLogged" class=" border-bottom my-2">
 		<div  class="container">
 			<div class="text-end align-middle">
         <h5 class="d-inline me-3">Bentornato Admin!</h5>
-				<button type="button" class="btn btn-danger mb-2" (click)="logout()">Logout</button>
+				<button type="button" class="btn btn-danger mb-2"  data-bs-toggle="modal"
+				data-bs-target="#modaleLogout" >Logout</button>
 			</div>
 		</div>
 	</div>
+
+	<div class="modal fade" id="modaleLogout" tabindex="-1" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered modal-lg">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h1 class="modal-title fs-5" id="exampleModalLabel">Logout</h1>
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+				<div class="modal-body d-flex flex-column align-items-center my-5">
+					<h3>Sei Sicuro di voler effettuare il logout?</h3>
+					<div class="d-flex justify-content-center">
+						<button type="button" class="btn btn-danger" data-bs-dismiss="modal" (click)="logout()">Logout</button>
+						<button type="button" class="btn btn-primary ms-2" data-bs-dismiss="modal">Annulla</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
 </header>
 <router-outlet></router-outlet>

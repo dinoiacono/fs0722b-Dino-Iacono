@@ -1,10 +1,42 @@
 <article class="blog-post text-center container w-25">
   <div>
     <h2 class="mb-1">{{post.title}}</h2>
-    <span><i class="bi bi-hand-thumbs-up-fill"></i></span>
-    <p class="blog-post-meta">December 14, 2020 by Admin <i class="bi bi-person-circle"></i></p>
+    <p class="blog-post-meta border-bottom">24 Gennaio 2023 by Admin <i class="bi bi-person-circle"></i></p>
     <div class="blog-post-body">
-      <p>{{post.body}}</p>
+      <p class="testo  text-start">{{post.body}}</p>
     </div>
   </div>
+
+
+  <div *ngIf="post.comments!.length > 0" class="border-top border-dark mb-4 px-5" >
+    <h3 class="mt-3">Commenti</h3>
+
+    <div class="card my-3" *ngFor="let c of post.comments">
+      <div class="card-body">
+        <h5 class="card-title">{{c.name}}</h5>
+        <p class="card-text">{{c.body}}</p>
+      </div>
+    </div>
+  </div>
+
+
+
+  <form (ngSubmit)="aggiungiCommento(formCommento)" #formCommento="ngForm">
+    <div class="container box-size border-top border-dark pt-4">
+      <h4>Dicci cosa pensi di questo articolo</h4>
+      <div class="input-group">
+        <input type="text" class="form-control" placeholder="Nome e Cognome" name="name" ngModel>
+      </div>
+      <div class="my-3">
+        <textarea class="form-control" rows="8" name="body" placeholder="Scrivi qui il tuo commento..." ngModel ></textarea>
+      </div>
+      <button type="submit" class="btn btn-success mx-1">Pubblica</button>
+    </div>
+  </form>
+
+  <div class="my-4">
+    <button *ngIf="this.post.id > this.postTotal[0].id" class="btn btn-dark mx-2" (click)="cambiaPagina(false)"><i class=" bi bi-arrow-left-circle-fill"></i></button>
+    <button class="btn btn-dark mx-2" (click)="cambiaPagina(true)" ><i class=" bi bi-arrow-right-circle-fill"></i></button>
+  </div>
+
 </article>

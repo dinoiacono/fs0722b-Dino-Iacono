@@ -8,11 +8,13 @@ import { PostService } from 'src/app/services/post.service';
   styleUrls: ['./archivio.component.scss']
 })
 export class ArchivioComponent implements OnInit {
-
+  
   constructor(private ps:PostService) { }
-
+  
+  select: number = 12
   posts: Post[] = []
   numeroPost: number = 12
+  offset:number = 0
 
   ngOnInit(): void {
     this.getPosts()
@@ -25,7 +27,18 @@ export class ArchivioComponent implements OnInit {
   }
 
   cambiaNumero(value:string){
-    this.numeroPost = Number(value)
+    this.select = Number(value)
+    this.numeroPost = this.select
+  }
+
+  cambiaOffset(control:boolean){
+    if(control) {
+      this.offset += this.select
+      this.numeroPost += this.select
+    } else {
+      this.offset -= this.select
+      this.numeroPost -= this.select
+    }
   }
 
 }

@@ -1,5 +1,5 @@
 <div class="card shadow my-3 mx-2 altezza">
-  <img src="{{post.imgUrl}}" alt="">
+  <img src="{{post.imgUrl}}" alt="Immagine Post {{post.id}}" class="h-50">
 	<div class="card-body">
 		<h3 class="card-title">{{post.title}}</h3>
 		<p class="card-text">{{ (post.body.length>100) ? ( post.body | slice:0:100)+'...' : (post.body) }}</p>

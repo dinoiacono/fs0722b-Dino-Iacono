@@ -32,18 +32,6 @@ export class FilmService {
         return this.http.post<FavoriteFilm>(`${this.url}favorites`,data)
     }
 
-    // removeLike( filmID:number, userID:number ){
-    //     this.getLike(userID).subscribe((res) => {
-    //         let likeID = res.find(x => x.movieId == filmID)?.id
-    //         console.log(likeID);
-    //         this.http.delete(`${this.url}favorites/${likeID}`)
-    //     })
-    // }
-
-    getLikeID( filmID:number, userID:number ){
-
-    }
-
     removeLike( filmID:number, userID:number ){
         let likeID:any
 

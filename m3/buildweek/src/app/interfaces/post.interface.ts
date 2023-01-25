@@ -3,7 +3,13 @@ export interface Post {
   body: string,
   imgUrl: string,
   id: number,
-  userId: number
+  userId: number,
+  comments?: Commento[]
+}
+
+export interface Commento {
+  name: string,
+  body: string
 }
 
 export interface ModificaPost{
