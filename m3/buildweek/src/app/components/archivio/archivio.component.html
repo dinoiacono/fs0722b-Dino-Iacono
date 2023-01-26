@@ -11,7 +11,7 @@
   </div>
   <div class="d-flex justify-content-center mb-3">
     <button *ngIf="offset > 0 " class="btn btn-primary" (click)="cambiaOffset(false)"><i class="bi bi-arrow-left-circle-fill"></i></button>
-    <button class="btn btn-primary" (click)="cambiaOffset(true)"><i class="bi bi-arrow-right-circle-fill"></i></button>
+    <button *ngIf="numeroPost < idUltimoPost-offset" class="btn btn-primary" (click)="cambiaOffset(true)"><i class="bi bi-arrow-right-circle-fill"></i></button>
   </div>
 </div>
 

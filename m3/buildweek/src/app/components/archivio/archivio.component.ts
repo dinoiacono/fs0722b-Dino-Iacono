@@ -8,13 +8,16 @@ import { PostService } from 'src/app/services/post.service';
   styleUrls: ['./archivio.component.scss']
 })
 export class ArchivioComponent implements OnInit {
-  
+
   constructor(private ps:PostService) { }
-  
+
   select: number = 12
   posts: Post[] = []
   numeroPost: number = 12
   offset:number = 0
+  idPrimoPost!: number
+  idUltimoPost!: number
+  stopAvanti: boolean = false
 
   ngOnInit(): void {
     this.getPosts()
@@ -23,6 +26,8 @@ export class ArchivioComponent implements OnInit {
   getPosts(){
     this.ps.getPost().subscribe((res) => {
       this.posts = res
+      this.idPrimoPost = Number(res[0].id)
+      this.idUltimoPost = Number(res.slice(-1)[0].id)
     })
   }
 
@@ -39,6 +44,7 @@ export class ArchivioComponent implements OnInit {
       this.offset -= this.select
       this.numeroPost -= this.select
     }
+
   }
 
 }

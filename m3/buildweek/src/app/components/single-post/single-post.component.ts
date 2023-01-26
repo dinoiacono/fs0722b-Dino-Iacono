@@ -15,18 +15,31 @@ export class SinglePostComponent implements OnInit {
 
 	post!: Post
   postTotal : Post[] = []
+  idPrimoPost!: number
+  idUltimoPost!: number
+  notFound: boolean = false
 
 
 	ngOnInit() {
     this.avvio()
-    this.ps.getPost().subscribe((res)=>this.postTotal = res)
+    this.ps.getPost().subscribe((res)=> {
+      this.postTotal = res
+      this.idPrimoPost = Number(res[0].id)
+      this.idUltimoPost = Number(res.slice(-1)[0].id)
+    })
 	}
 
   avvio(){
 		this.route.queryParams.subscribe(params => {
       if (params['id']) {
-        this.ps.getPostbyID(params['id'] ).subscribe((res) => {
+        // this.post = this.postTotal.filter(p => p.id)
+        this.ps.getPostbyID(params['id']).subscribe((res) => {
+          console.log("SONO DENTRO");
           this.post = res
+          this.notFound = false
+        }, (err) => {
+          this.notFound = true
+          console.log('HTTP Error', err)
         })
       } else {
         this.ps.getPostbyID(1).subscribe((res) => {
@@ -38,10 +51,12 @@ export class SinglePostComponent implements OnInit {
   }
 
   cambiaPagina(controller: boolean){
-    let postID = this.post.id
-    controller ? postID++ : postID--
-    this.router.navigate(['/post'], { queryParams: { id: postID } });
+
+    controller ? this.post.id++ : this.post.id--
+    this.router.navigate(['/post'], { queryParams: { id: this.post.id } });
   }
+
+
 
   aggiungiCommento(form:NgForm){
     this.ps.nuovoCommento(form,this.post).subscribe((res) => {

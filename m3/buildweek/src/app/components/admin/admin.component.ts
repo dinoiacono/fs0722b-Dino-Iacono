@@ -15,6 +15,7 @@ export class AdminComponent implements OnInit {
 
   posts: Post[] = []
   postEdit!: Post
+  postDelete!: number
   editMode: boolean = false
 
   ngOnInit(): void {
@@ -28,10 +29,7 @@ export class AdminComponent implements OnInit {
   }
 
   elimina(postID:number){
-    this.ps.eliminaPost(postID).subscribe((res) => {
-      console.log(res)
-      this.posts = this.posts.filter(p=>p.id!=postID)
-    })
+    this.postDelete = postID
   }
 
   modifica(postID:number){
@@ -41,6 +39,12 @@ export class AdminComponent implements OnInit {
     });
   }
 
+  inviaElimina(postID:number){
+    this.ps.eliminaPost(postID).subscribe((res) => {
+      console.log(res)
+      this.posts = this.posts.filter(p=>p.id!=postID)
+    })
+  }
   inviaModifica(form:NgForm,postID:number){
     let articolo: ModificaPost = { id: postID, title: form.value.title, body: form.value.body }
     this.ps.modificaPost(articolo).subscribe((res) => {

@@ -45,7 +45,7 @@
 					<span>
 						<button type="button" class="btn btn-primary mx-1" (click)="modifica(p.id)"><i
 								class="bi bi-pencil-square"></i></button>
-						<button type="button" class="btn btn-danger mx-1" data-bs-toggle="modal" data-bs-target="#modaleElimina"><i
+						<button type="button" class="btn btn-danger mx-1" data-bs-toggle="modal" data-bs-target="#modaleElimina" (click)="elimina(p.id)"><i
 								class="bi bi-trash"></i></button>
 						<div class="modal fade" id="modaleElimina" tabindex="-1" aria-hidden="true">
 							<div class="modal-dialog modal-dialog-centered modal-lg">
@@ -57,7 +57,7 @@
 									<div class="modal-body d-flex flex-column align-items-center my-5">
 										<h3>Sei Sicuro di voler Eliminare il Post?</h3>
 										<div class="d-flex justify-content-center">
-											<button type="button" class="btn btn-danger me-2" data-bs-dismiss="modal" (click)="elimina(p.id)">Elimina</button>
+											<button type="button" class="btn btn-danger me-2" data-bs-dismiss="modal" (click)="inviaElimina(postDelete)">Elimina</button>
 											<button type="button" class="btn btn-primary ms-2" data-bs-dismiss="modal">Annulla</button>
 										</div>
 									</div>
