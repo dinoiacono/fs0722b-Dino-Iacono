@@ -5,7 +5,8 @@ import { ArchivioComponent } from './components/archivio/archivio.component';
 import { SinglePostComponent } from './components/single-post/single-post.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
 import { AdminComponent } from './components/admin/admin.component';
-import { AuthGuard } from './components/auth/auth.guard';
+import { AuthGuard } from './auth/auth.guard';
+
 
 
 const routes: Routes = [

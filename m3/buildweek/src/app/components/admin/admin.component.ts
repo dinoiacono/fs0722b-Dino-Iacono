@@ -41,7 +41,6 @@ export class AdminComponent implements OnInit {
 
   inviaElimina(postID:number){
     this.ps.eliminaPost(postID).subscribe((res) => {
-      console.log(res)
       this.posts = this.posts.filter(p=>p.id!=postID)
     })
   }

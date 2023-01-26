@@ -13,9 +13,7 @@ export class PostService {
 
   constructor(private http:HttpClient) { }
 
-
-
-  urlPosts:string = environment.url+"posts"
+  urlPosts:string = environment.url
 
   getPost(){
     return this.http.get<Post[]>(`${this.urlPosts}`)

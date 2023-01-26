@@ -34,12 +34,10 @@ export class SinglePostComponent implements OnInit {
       if (params['id']) {
         // this.post = this.postTotal.filter(p => p.id)
         this.ps.getPostbyID(params['id']).subscribe((res) => {
-          console.log("SONO DENTRO");
           this.post = res
           this.notFound = false
         }, (err) => {
           this.notFound = true
-          console.log('HTTP Error', err)
         })
       } else {
         this.ps.getPostbyID(1).subscribe((res) => {
@@ -60,9 +58,7 @@ export class SinglePostComponent implements OnInit {
 
   aggiungiCommento(form:NgForm){
     this.ps.nuovoCommento(form,this.post).subscribe((res) => {
-      console.log(res);
       this.avvio()
-
     })
   }
 

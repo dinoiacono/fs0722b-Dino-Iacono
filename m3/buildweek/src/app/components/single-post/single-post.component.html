@@ -30,12 +30,12 @@
       <div class="container box-size border-top border-dark pt-4">
         <h4>Dicci cosa pensi di questo articolo</h4>
         <div class="input-group">
-          <input type="text" class="form-control" placeholder="Nome e Cognome" name="name" ngModel>
+          <input type="text" class="form-control" placeholder="Nome e Cognome" name="name" ngModel required>
         </div>
         <div class="my-3">
-          <textarea class="form-control" rows="8" name="body" placeholder="Scrivi qui il tuo commento..." ngModel ></textarea>
+          <textarea class="form-control" rows="8" name="body" placeholder="Scrivi qui il tuo commento..." ngModel required></textarea>
         </div>
-        <button type="submit" class="btn btn-success mx-1">Pubblica</button>
+        <button type="submit" [ngClass]="{'disabled': formCommento.invalid}" class="btn btn-success mx-1">Pubblica</button>
       </div>
     </form>
 

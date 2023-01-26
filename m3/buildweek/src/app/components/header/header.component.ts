@@ -2,7 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 
 import { Router } from '@angular/router';
-import { AuthService } from '../auth/auth.service';
+import { AuthService } from 'src/app/auth/auth.service';
+
 
 
 @Component({
@@ -28,12 +29,11 @@ export class HeaderComponent implements OnInit {
 	submit(f:NgForm) {
     this.as.login(f.value).subscribe((res)=>{
       this.r.navigate(["/"])
-      console.log(res);
 		})
 	}
   logout(){
       this.as.logout()
   }
-  
+
 }
 
