@@ -15,7 +15,7 @@ export class PostService {
 
 
 
-  urlPosts:string = environment.urlPosts
+  urlPosts:string = environment.url+"posts"
 
   getPost(){
     return this.http.get<Post[]>(`${this.urlPosts}`)

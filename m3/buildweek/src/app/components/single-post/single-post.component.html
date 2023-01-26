@@ -44,7 +44,9 @@
   </article>
 </ng-template>
 
-<div class="my-4">
-  <button *ngIf="this.post.id > this.idPrimoPost" class="btn btn-dark mx-2" (click)="cambiaPagina(false)"><i class=" bi bi-arrow-left-circle-fill"></i></button>
-  <button *ngIf="this.post.id < this.idUltimoPost" class="btn btn-dark mx-2" (click)="cambiaPagina(true)" ><i class=" bi bi-arrow-right-circle-fill"></i></button>
+<div class="container text-center">
+  <div class="m-4 p-2 ">
+    <button *ngIf="this.post.id > this.idPrimoPost" class="btn btn-dark mx-5" (click)="cambiaPagina(false)"><i class=" bi bi-arrow-left-circle-fill"></i> Precedente</button>
+    <button *ngIf="this.post.id < this.idUltimoPost" class="btn btn-dark mx-5" (click)="cambiaPagina(true)" >Successivo <i class=" bi bi-arrow-right-circle-fill"></i></button>
+  </div>
 </div>

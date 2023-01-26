@@ -8,9 +8,17 @@ import { AuthService } from '../auth/auth.service';
 })
 export class HeroComponent implements OnInit {
 
-  constructor(public as:AuthService) { }
+  logged = false;
 
-  ngOnInit(): void {
-  }
+	constructor(private as:AuthService) { }
 
+	ngOnInit(): void {
+    this.as.authObs.subscribe((res)=>{
+      if(res) {
+        this.logged = true
+      } else {
+        this.logged = false
+      }
+    })
+	}
 }

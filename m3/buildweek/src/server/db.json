@@ -1,0 +1,15 @@
+{
+  "users": [
+    {
+      "email": "prova@prova.com",
+      "password": "$2a$10$k5yfM5m9E7rjDV3.e8eSjeSfG8FOx9wdqrx4CsTrjoptuFTrxOkXe",
+      "nome": "Pippo",
+      "id": 1
+    },
+    {
+      "email": "prov@prova.com",
+      "password": "$2a$10$1zoOVRbw7rAicAnhnZUzPO5hux324n3xIQMEEiOmQuLdTuAVPE69y",
+      "id": 2
+    }
+  ]
+}

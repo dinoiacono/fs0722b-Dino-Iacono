@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
-import { PostService } from 'src/app/services/post.service';
+
+import { Router } from '@angular/router';
 import { AuthService } from '../auth/auth.service';
+
 
 @Component({
   selector: 'app-header',
@@ -9,22 +11,29 @@ import { AuthService } from '../auth/auth.service';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
+  logged = false;
 
-  constructor(public as:AuthService) { }
+	constructor(private as:AuthService, private r : Router) { }
 
-  ngOnInit(): void {
-  }
+	ngOnInit(): void {
+    this.as.authObs.subscribe((res)=>{
+      if(res) {
+        this.logged = true
+      } else {
+        this.logged = false
+      }
+    })
+	}
 
-  accedi(f:NgForm){
-    if(f.value.username == 'admin' && f.value.password == 'admin'){
-      this.as.isLogged = true
-    }else{
-      this.as.isLogged = false
-    }
-  }
-
+	submit(f:NgForm) {
+    this.as.login(f.value).subscribe((res)=>{
+      this.r.navigate(["/"])
+      console.log(res);
+		})
+	}
   logout(){
-    this.as.isLogged = false
+      this.as.logout()
   }
-
+  
 }
+

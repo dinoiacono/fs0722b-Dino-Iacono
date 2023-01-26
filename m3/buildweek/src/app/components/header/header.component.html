@@ -16,7 +16,7 @@
 							Archivio
 						</a>
           </li>
-          <li *ngIf="this.as.isLogged">
+          <li *ngIf="logged">
             <div class="dropdown">
               <a class="btn btn-light dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                 Admin
@@ -33,7 +33,7 @@
 			</div>
 		</div>
 	</div>
-	<div class="px-3 py-2 border-bottom mb-3 bg-light" *ngIf="!this.as.isLogged">
+	<div class="px-3 py-2 border-bottom mb-3 bg-light" *ngIf="!logged">
 		<div class="container d-flex flex-wrap justify-content-end">
 
 			<div class="text-end">
@@ -52,17 +52,17 @@
 						</div>
 						<div class="modal-body d-flex flex-column align-items-center my-5">
 							<h3>Accedi</h3>
-							<form (ngSubmit)="accedi(login)" #login="ngForm">
+							<form (ngSubmit)="submit(login)" #login="ngForm">
 								<div class="mb-3">
 									<label for="inputUser" class="form-label">Email => admin</label>
-									<input type="text" class="form-control" id="inputUser" name="username" placeholder="Inserisci Username" ngModel required>
+									<input type="email" class="form-control" id="inputUser" name="email" placeholder="Inserisci email" ngModel required>
 								</div>
 								<div class="mb-3">
 									<label for="inputPassword" class="form-label">Password => admin</label>
 									<input type="password" class="form-control" id="inputPassword" name="password"
 										placeholder="Inserisci Password..." ngModel required>
 								</div>
-								<button type="submit" class="btn btn-primary" data-bs-dismiss="modal">Accedi</button>
+								<button type="submit" class="btn btn-primary" [ngClass]="{'disabled': login.invalid}" data-bs-dismiss="modal">Accedi</button>
 							</form>
 						</div>
 					</div>
@@ -70,7 +70,7 @@
 			</div>
 		</div>
 	</div>
-	<div *ngIf="this.as.isLogged" class=" border-bottom my-2">
+	<div *ngIf="logged" class=" border-bottom my-2">
 		<div  class="container">
 			<div class="text-end align-middle">
         <h5 class="d-inline me-3">Bentornato Admin!</h5>
