@@ -1,7 +1,0 @@
-<div class="row flex-column text-center align-items-center mt-4" *ngIf="!logged">
-    <h2>Accedi</h2>
-    <div class="col-6 mb-4 pb-4 border-bottom border-dark"><app-login></app-login></div>
-    <h2>Registrati</h2>
-    <div class="col-6"><app-signup></app-signup></div>
-</div>
-<h1 *ngIf="logged" class="text-center">Ciao {{utente.nome | uppercase}}!</h1>
