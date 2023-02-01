@@ -1,9 +1,0 @@
-<div class="card" style="width: 18rem;">
-  <img src="https://image.tmdb.org/t/p/w500/{{film.poster_path}}" class="card-img-top cover" alt="Copertina {{film.title}}">
-  <div class="card-body bg-secondary">
-    <div class="d-flex justify-content-center py-2">
-        <button class="btn btn-dark mx-3" [ngClass]="liked ? 'like' : 'notliked'" (click)="likeToggle(film.id)"><i class="bi bi-heart-fill"></i></button>
-    </div>
-  </div>
-</div>
-
