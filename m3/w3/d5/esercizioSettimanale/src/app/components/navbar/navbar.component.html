@@ -1,0 +1,25 @@
+<header class="p-3 border-bottom">
+	<div class="container">
+		<div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+			<ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+				<li><a class="nav-link px-2 link-dark" routerLink="/">Home</a></li>
+				<li><a class="nav-link px-2 link-dark" routerLink="/film">Film</a></li>
+			</ul>
+
+			<div *ngIf="!logged">
+				<p class="text-bg-danger text-white p-2 rounded">Effettua l'accesso oppure Registrati!</p>
+			</div>
+
+            <div *ngIf="logged" class="dropdown text-end">
+                <a href="#" class="d-block link-dark text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                    Bentornato, {{utente.nome|uppercase}} <i class="bi bi-person-circle fs-5" ></i>
+                    </a>
+                <ul class="dropdown-menu text-small">
+                    <li><a class="dropdown-item " routerLink="/my-profile">Profile</a></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li><a class="dropdown-item" (click)="logout()">Esci</a></li>
+                </ul>
+            </div>
+		</div>
+	</div>
+</header>
