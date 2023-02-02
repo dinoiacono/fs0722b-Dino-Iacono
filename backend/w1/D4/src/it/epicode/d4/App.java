@@ -4,26 +4,24 @@ package it.epicode.d4;
 public class App {
     public static void main(String[] args) throws Exception {
         
-        Dipendente d1 = new Dipendente(1, DipartimentoEnum.AMMINISTRAZIONE);
+        Dipendente d1 = new Dipendente(1, DipartimentoEnum.PRODUZIONE);
+        Dipendente d2 = new Dipendente(2, DipartimentoEnum.PRODUZIONE);
+        Dipendente imp = new Dipendente(3, Dipendente.stipendioBase * 1.2, 30, LivelloEnum.IMPIEGATO, DipartimentoEnum.AMMINISTRAZIONE);
+        Dipendente dir = new Dipendente(4, Dipendente.stipendioBase * 2, 30, LivelloEnum.DIRIGENTE, DipartimentoEnum.VENDITE);
 
+        
+        
         d1.stampaDipendente();
-        System.out.println("------------------------------");
-        d1.promozione();
-        d1.promozione();
-        d1.promozione();
-        d1.promozione();
-        System.out.println("------------------------");
-        d1.stampaDipendente();
-        System.out.println("Lo stipendio del dipendente senza straordinari è: " + calcolaPaga(d1));
-        System.out.println("Lo stipendio del dipendente con straordinari è: " + calcolaPagaStraoirdinaria(d1, 10));
+        System.out.println("----------------------------------------------------------------");
+        d2.promozione();
+        d2.stampaDipendente();
+        System.out.println("----------------------------------------------------------------");
+        imp.promozione();
+        imp.stampaDipendente();
+        System.out.println("----------------------------------------------------------------");
+        dir.stampaDipendente();
+        System.out.println("----------------------------------------------------------------");
 
-    }
-
-    public static double calcolaPaga(Dipendente x) {
-        return x.getStipendio();
-    }
-    public static double calcolaPagaStraoirdinaria(Dipendente x, int h) {
-        double pagaExtra = x.getImportoOrarioStraordinario() * h;
-        return x.getStipendio() + pagaExtra;
+        System.out.println("Il totale degli stipendi è: " + (d1.calcolaPaga(5) + d2.calcolaPaga(5) + imp.calcolaPaga(5) + dir.calcolaPaga(5)) + "€");
     }
 }

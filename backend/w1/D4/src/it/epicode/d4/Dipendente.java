@@ -47,6 +47,14 @@ public class Dipendente {
         return importoOrarioStraordinario;
     }
 
+    public void setDipartimento(DipartimentoEnum d) {
+        this.dipartimento = d;
+    }
+
+    public void setimportoOrarioStraordinario(double imp) {
+        this.importoOrarioStraordinario = imp;
+    }
+
 
     public void stampaDipendente(){
         System.out.println("Dipendente: \nMatricola: " + this.getMatricola() + "\nStipendio: " + this.getStipendio() + "\nImporto Straordinari: " + this.importoOrarioStraordinario + "\nLivello: " + this.getLivello() + "\nDipartimento: " + this.dipartimento);
@@ -90,6 +98,12 @@ public class Dipendente {
     public void promozione(){
         this.livello= setLivello();
         setStipendio();
+    }
+    public double calcolaPaga() {
+        return this.getStipendio();
+    }
+    public double calcolaPaga(int h) {
+        return (this.getImportoOrarioStraordinario() * h) + this.getStipendio();
     }
 
 }
