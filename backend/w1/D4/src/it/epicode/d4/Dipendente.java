@@ -1,30 +1,16 @@
 package it.epicode.d4;
 
-public abstract class Dipendente {
-    
-    public enum Livello{
-        OPERAIO,
-        IMPIEGATO,
-        QUADRO,
-        DIRIGENTE
-    }
-
-    public enum Dipartimento{
-      PRODUZIONE,
-      AMMINISTRAZIONE,
-      VENDITE
-    }
-
+public class Dipendente {
     
     private int matricola;
     private double stipendio;
-    public double importoOrarioStraordinario;
-    private Livello livello;
-    public Dipartimento dipartimento;
-    private static double stipendioBase = 1000;
+    private double importoOrarioStraordinario;
+    private LivelloEnum livello;
+    private DipartimentoEnum dipartimento;
+    static double stipendioBase = 1000;
     
     
-    public Dipendente(int matricola, double stipendio, double importoOrarioStraordinario, Livello livello ,Dipartimento dipartimento) {
+    public Dipendente(int matricola, double stipendio, double importoOrarioStraordinario, LivelloEnum livello ,DipartimentoEnum dipartimento) {
         this.matricola = matricola;
         this.stipendio = stipendio;
         this.importoOrarioStraordinario = importoOrarioStraordinario;
@@ -40,11 +26,11 @@ public abstract class Dipendente {
         return stipendio;
     }
 
-    public Livello getLivello() {
+    public LivelloEnum getLivello() {
         return livello;
     }
 
-    public Dipartimento getDipartimento() {
+    public DipartimentoEnum getDipartimento() {
         return dipartimento;
     }
 
@@ -58,14 +44,14 @@ public abstract class Dipendente {
         System.out.println("Dipendente: \nMatricola: " + this.getMatricola() + "\nStipendio: " + this.getStipendio() + "\nImporto Straordinari: " + this.importoOrarioStraordinario + "\nLivello: " + this.getLivello() + "\nDipartimento: " + this.dipartimento);
     }
 
-    public Livello setLivello(){
+    public LivelloEnum setLivello(){
         switch(this.livello){
             case OPERAIO:
-                return Livello.IMPIEGATO;
+                return LivelloEnum.IMPIEGATO;
             case IMPIEGATO:
-                return Livello.QUADRO;
+                return LivelloEnum.QUADRO;
             case QUADRO:
-                return Livello.DIRIGENTE;
+                return LivelloEnum.DIRIGENTE;
             case DIRIGENTE:
                 System.out.println("Sei già dirigente e ti paghiamo un botto");
                 break;
