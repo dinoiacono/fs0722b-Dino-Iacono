@@ -102,8 +102,8 @@ public class Dipendente {
     public double calcolaPaga() {
         return this.getStipendio();
     }
-    public double calcolaPaga(int h) {
-        return (this.getImportoOrarioStraordinario() * h) + this.getStipendio();
+    public double calcolaPaga(Dipendente d, int h) {
+        return (d.getImportoOrarioStraordinario() * h) + this.getStipendio();
     }
 
 }

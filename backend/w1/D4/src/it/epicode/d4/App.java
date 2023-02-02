@@ -22,6 +22,6 @@ public class App {
         dir.stampaDipendente();
         System.out.println("----------------------------------------------------------------");
 
-        System.out.println("Il totale degli stipendi è: " + (d1.calcolaPaga(5) + d2.calcolaPaga(5) + imp.calcolaPaga(5) + dir.calcolaPaga(5)) + "€");
+        System.out.println("Il totale degli stipendi è: " + (d1.calcolaPaga(d1, 5) + d2.calcolaPaga(d2, 5) + imp.calcolaPaga(imp, 5) + dir.calcolaPaga(dir, 5)) + "€");
     }
 }
