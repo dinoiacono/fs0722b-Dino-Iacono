@@ -8,6 +8,14 @@ public class Dipendente {
     private LivelloEnum livello;
     private DipartimentoEnum dipartimento;
     static double stipendioBase = 1000;
+
+    public Dipendente(int matricola, DipartimentoEnum dipartimento) {
+        this.matricola = matricola;
+        this.dipartimento = dipartimento;
+        this.stipendio = stipendioBase;
+        this.importoOrarioStraordinario = 30;
+        this.livello = LivelloEnum.OPERAIO;
+    }
     
     
     public Dipendente(int matricola, double stipendio, double importoOrarioStraordinario, LivelloEnum livello ,DipartimentoEnum dipartimento) {
