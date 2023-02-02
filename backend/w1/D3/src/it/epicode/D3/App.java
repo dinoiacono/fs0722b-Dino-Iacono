@@ -22,6 +22,9 @@ public class App {
         
 
     }
+    public static void name() {
+        
+    }
 
     public static void stringaPariDispari(String s) {
         if (s.length()%2 == 0) {
