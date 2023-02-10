@@ -4,6 +4,7 @@ public class Libro extends ElementoBibliotecario {
     
     private String autore;
     private String genere;
+    
     public Libro(int ISBN, String titolo, int annoPub, int numeroPag, String autore, String genere) {
         super(ISBN, titolo, annoPub, numeroPag);
         this.autore = autore;
