@@ -12,33 +12,32 @@ public class CatalogoBibliotecario {
     
     public static void main(String[] args) throws Exception {
         pulisciConsole();
-        System.out.println("Benvenuto in biblioteca, che vuoi fare?");
-        System.out.println("\n1)Crea un nouvo elemento;\n" + "2)Rimuovi un elemento tramite il codice ISBN;\n" + "3)Trova un elemento tramite il codice ISBN;\n" + "4)Vedi tutti i libri usciti nell'anno che desideri;\n" + "5)Vedi tutti i libri dell'autore che desideri;\n" + "0)Esci.\n");
         while (true) {
+            System.out.println("\nBenvenuto in biblioteca, che vuoi fare?");
+            System.out.println("\n1)Crea un nouvo elemento;\n" + "2)Rimuovi un elemento tramite il codice ISBN;\n" + "3)Trova un elemento tramite il codice ISBN;\n" + "4)Vedi tutti i libri usciti nell'anno che desideri;\n" + "5)Vedi tutti i libri dell'autore che desideri;\n" + "6)Vedi tutti i libri e le riviste che abbaimo;\n" + "0)Esci.\n");
             int scelta = sc.nextInt();
             switch (scelta) {
             case 1:
-                pulisciConsole();
                 nuovoElemento();
                 break;
             case 2:
-                pulisciConsole();
+
                 cancellaConIsbn();
                 break;
             case 3:
-                pulisciConsole();
+
                 ricercaConISBN();
                 break;
             case 4:
-                pulisciConsole();
+
                 ricercaConAnno();
                 break;
             case 5:
-                pulisciConsole();
+
                 ricercaConAutore();
                 break;
             case 6:
-                pulisciConsole();
+
                 stampaCatalogo();
                 break;
             case 0:
@@ -57,7 +56,6 @@ public class CatalogoBibliotecario {
  */
 
     public static void nuovoElemento() {
-        pulisciConsole();
         try {
             System.out.println("Cosa vuoi aggiungere?");
             System.out.print("1)Libro\n2)Rivista");
@@ -79,6 +77,7 @@ public class CatalogoBibliotecario {
                     listaLibri.put(isbnL,new Libro(isbnL, titoloL, annoL, numeroPagL, autore, genere));
                     break;
                 case 2://rivista
+                    sc.nextLine();
                     System.out.print("Titolo");
                     String titoloR = sc.nextLine();
                     System.out.print("Annio di pubblicazione: ");
@@ -118,8 +117,7 @@ public class CatalogoBibliotecario {
  * usando il codice ISBN come parametro
  */
 
-    public static void cancellaConIsbn() {
-        pulisciConsole();
+    public static void cancellaConIsbn() {;
         stampaCatalogo();
      System.out.println("\nInserici il numero ISBN del libro o rivista da cancellare: \n");
      try {
@@ -140,8 +138,12 @@ public class CatalogoBibliotecario {
         System.out.println("\nInserici il numero ISBN del libro o rivista da trovare: \n");
        try {
         int isbnFind = sc.nextInt();
-        trovaLibro(isbnFind);
-        trovaRivista(isbnFind);
+        listaLibri.entrySet().stream()
+        .filter(l -> l.getKey().equals(isbnFind))
+        .forEach(element -> System.out.println("\n---------------Libri---------------\nTitolo: " + element.getValue().getTitolo() + "\nAutore: " + element.getValue().getAutore()));
+        listaRiviste.entrySet().stream()
+        .filter(r -> r.getKey().equals(isbnFind))
+        .forEach(element -> System.out.println("\n---------------Riviste---------------\nTitolo: " + element.getValue().getTitolo()));
        } catch (Exception e) {
         // TODO: handle exception
        } 
@@ -156,9 +158,14 @@ public class CatalogoBibliotecario {
     public static void ricercaConAnno() {
         System.out.println("\nInserici l'anno per stampare tutti i libri e le riviste pubblicate in quell'anno: \n");
         try {
+         sc.nextLine();
          int annoFind = sc.nextInt();
-         trovaLibro(annoFind);
-         trovaRivista(annoFind);
+         listaLibri.entrySet().stream()
+         .filter(l -> l.getValue().getAnnoPub() == annoFind)
+         .forEach(element -> System.out.println("\n---------------Libri---------------\nTitolo: " + element.getValue().getTitolo() + "\nAutore: " + element.getValue().getAutore()));
+         listaRiviste.entrySet().stream()
+         .filter(r -> r.getValue().getAnnoPub() == annoFind)
+         .forEach(element -> System.out.println("\n---------------Riviste---------------\nTitolo: " + element.getValue().getTitolo()));
         } catch (Exception e) {
          // TODO: handle exception
         }   
@@ -172,8 +179,11 @@ public class CatalogoBibliotecario {
     public static void ricercaConAutore() {
         System.out.println("\nInserici il nome dell'autore del quale vuoi vedere i libri: \n");
         try {
+        sc.nextLine();
          String autoreFind = sc.nextLine();
-         trovaLibro(autoreFind);
+         listaLibri.entrySet().stream()
+        .filter(l -> l.getValue().getAutore().equals(autoreFind))
+        .forEach(element -> System.out.println("\n---------------Libri---------------\nTitolo: " + element.getValue().getTitolo() + "\nAutore: " + element.getValue().getAutore()));
         } catch (Exception e) {
          // TODO: handle exception
         }   
