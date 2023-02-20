@@ -2,7 +2,6 @@ package main;
 
 
 import java.text.ParseException;
-import java.text.SimpleDateFormat;
 import java.util.GregorianCalendar;
 import java.util.List;
 import java.util.Random;
@@ -23,6 +22,113 @@ public class Archivio {
 	
 	public static void main(String[] args) throws ParseException {
 
+		Libro l1 = new Libro();
+		l1.setAnno(2021);
+		l1.setAutore("pippo");
+		l1.setGenere("bambini");
+		l1.setPagine(100);
+		l1.setIsbn(isbnGenerator());
+		l1.setTitolo("coccodrillo");
+		
+		Utente u1 = new Utente();
+		u1.setNome("Giggio");
+		u1.setCognome("de giggis");
+		u1.setTessera(codiceTessera());
+		u1.setData_nascita(new GregorianCalendar(2000,04, 05).getTime());
+		
+		Rivista r1 = new Rivista();
+		r1.setAnno(2021);
+		r1.setIsbn(isbnGenerator());
+		r1.setPagine(20);
+		r1.setPeriodo(Periodicita.SEMESTRALE);
+		r1.setTitolo("pippo e pluto");
+		
+		Prestito p1 = new Prestito();
+		p1.setIsbn(984374);
+		p1.setUtente(ricercaUtentePerTessera(8929));
+		GregorianCalendar data = new GregorianCalendar(2023,02, 04);
+		p1.setData_inizio(data.getTime());
+		data.add((GregorianCalendar.MONTH), 1);
+		p1.setData_previsione(data.getTime());
+		
+/*
+ * 	QUESTI SONO I METODI PER POPOLARE IL DB
+ */
+		
+		//aggiungiElemento(l1);
+		//aggiungiElemento(r1);
+		//aggiungiUtente(u1);
+		//aggiungiPrestito(p1);
+
+//-----------------------------------------------
+		
+/*
+ * QUESTO METODO VA A RICERCARE TUTTI GLI ELEMENTI CHE HANNO NEL LORO TITOLO 
+ * LA STRINGA INSERITA NON TENENDO CONTO DI MAIUSCOLE O MINUSCOLE
+ */
+	
+		//List<Elemento> lista1 = ricercaElementiPerTitolo("cocco");
+		
+//		for (Elemento e : lista1) {
+//			System.out.println(e.toString());
+//		}
+		
+//------------------------------------------------
+		
+/*
+ * QUESTO METODO RITORNA UNA LISTA CON TUTTI GLI ELEMENTI PUBBLICATI NELL'ANNO INSERITO
+ */
+		
+//		List<Elemento> lista2 = ricercaElementiPerAnno(2021);
+//		
+//		for (Elemento e : lista2) {
+//		System.out.println(e.toString());
+//	}
+		
+//------------------------------------------------
+	
+/*
+* QUESTO METODO RICERCA TUTTI I LIBRI SCRITTI DA UN AUTORE
+*/
+		
+//		List<Libro> lista3 = ricercaLibriPerAutore("pippo");
+//		
+//		for (Elemento e : lista3) {
+//		System.out.println(e.toString());
+//	}
+		
+//------------------------------------------------
+		
+/*
+ * QUESTO METODO RICERCA GLI ELEMENTI PRESI IN PRESTITO DA UN'UTENTE
+ * TRAMITE IL SUO NUMERO DI TESSERA 
+ */
+		
+//		List<Prestito> lista4 = ricercaElementiInPrestito(8929);
+//		
+//		for (Prestito e : lista4) {
+//		System.out.println(e.toString());
+//	}
+		
+//-----------------------------------------------
+		
+/*
+ * QUESTO METODO RICERCA TUTTI I PRESTITI SCADUTI E NON RESTITUITI 
+ * FINO ALLA DATA CHE VIENE MESSA IN INPUT
+ */
+		
+//		ricercaPrestitiScaduti(new GregorianCalendar(2023, 05, 04));
+		
+//------------------------------------------------
+		
+/*
+ * QUESTO METODO IMPOSTA LA FINE DEL PRESTITO TRAMITE L'ID DEL PRESTITO 
+ * E LA DATA DA IMPOSTARE COME FINE 
+ */
+		
+//		impostaFinePrestito(2, new GregorianCalendar(2023, 05, 20));
+		
+		
 	}
 	
 	
@@ -161,7 +267,7 @@ public class Archivio {
         }
    
 	}
-
+	
 	public static void impostaFinePrestito(Integer idPrestito, GregorianCalendar dataFine) {
 	    EntityManager em = emf.createEntityManager();
         Prestito p = em.find(Prestito.class, idPrestito);
@@ -178,8 +284,6 @@ public class Archivio {
             em.close();
         }
 
-		//mioUtente.setEmail("mario.rossi@example.com");
-		//modificaUtente(mioUtente);
 	}
 	
     /*
