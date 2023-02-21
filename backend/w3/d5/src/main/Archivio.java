@@ -67,8 +67,8 @@ public class Archivio {
  * LA STRINGA INSERITA NON TENENDO CONTO DI MAIUSCOLE O MINUSCOLE
  */
 	
-		//List<Elemento> lista1 = ricercaElementiPerTitolo("cocco");
-		
+//		List<Elemento> lista1 = ricercaElementiPerTitolo("cocco");
+//		
 //		for (Elemento e : lista1) {
 //			System.out.println(e.toString());
 //		}
