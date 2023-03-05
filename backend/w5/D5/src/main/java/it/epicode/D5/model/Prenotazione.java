@@ -20,7 +20,7 @@ public class Prenotazione {
 	private Date dataPrenotazione;
 	private Date dataScadenza;
 	
-	@OneToOne(cascade = CascadeType.ALL)
+	@OneToOne(cascade = CascadeType.MERGE)
 	@JoinColumn(name = "id_postazione", referencedColumnName = "id")
 	private Postazione postazione;
 	

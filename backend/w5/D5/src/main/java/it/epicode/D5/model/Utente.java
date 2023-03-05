@@ -27,5 +27,9 @@ public class Utente {
 	@OneToMany( mappedBy = "utente", cascade = CascadeType.ALL )
 	private List<Prenotazione> prenotazioni;
 		
+	
+	public void generaUtente() {
+
+	}
 }
 

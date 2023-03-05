@@ -15,10 +15,14 @@ public class Postazione {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
+	
 	private String descrizione;
+	
 	@Enumerated(EnumType.STRING)
 	private TipoPostazione tipo;
+	
 	private int maxUtenti;
+	
 	private Boolean disponibilita;
 	
 	@ManyToOne
@@ -28,25 +32,9 @@ public class Postazione {
 	@OneToOne(mappedBy = "postazione")
 	private Prenotazione prenotazione;
 	
-	public void setMaxUtenti() {
-		switch (tipo) {
-		case OPENSPACE:
-			this.maxUtenti = 50;
-			break;
-		case PRIVATO:
-			this.maxUtenti = 1;
-			break;
-		case SALARIUNIONI:
-			this.maxUtenti = 70;
-			break;
-		default: this.maxUtenti = 1;
-			break;
-		}	
+	public void stampaPostazione(){
+		System.out.println(this.tipo + ", " + this.descrizione + ", " + this.maxUtenti + ", " + this.edificio.getNome()  + ", " +  this.edificio.getCitta() + ", " + this.edificio.getIndirizzo());
 	}
 	
-	public void setDisponibilita() {
-		if (this.prenotazione == null) this.disponibilita = true;
-		else this.disponibilita = false;
-	}
 }
 

@@ -7,7 +7,7 @@ import lombok.*;
 
 
 @Entity
-@Table(name = "edificii")
+@Table(name = "edifici")
 @NoArgsConstructor
 @AllArgsConstructor
 @Data
@@ -18,10 +18,11 @@ public class Edificio {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	private String nome;
+	@Column(unique = true)
 	private String indirizzo;
 	private String citta;
 	
 	@OneToMany( mappedBy = "edificio", cascade = CascadeType.ALL )
 	private List<Postazione> postazioni;
-		
+	
 }

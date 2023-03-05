@@ -1,5 +1,7 @@
 package it.epicode.D5.service;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -11,12 +13,12 @@ public class UtenteService {
 	
 	@Autowired UtenteDaoRepo utenteService;
 	
-	public void saveUtente(String nome, String cognome, String email, String username) {
+	public void saveUtente(String n, String c, String e, String use) {
 		Utente u = new Utente();
-		u.setNome(nome);
-		u.setCognome(cognome);
-		u.setEmail(email);
-		u.setUsername(username);
+		u.setNome(n);
+		u.setCognome(c);
+		u.setEmail(e);
+		u.setUsername(use);
 		utenteService.save(u);
 	}
 	
@@ -30,6 +32,10 @@ public class UtenteService {
 	
 	public void removeUtente(Utente u) {
 		utenteService.delete(u);
+	}
+	
+	public List<Utente> returnAllUtenti() {
+		return (List<Utente>) utenteService.findAll();
 	}
 
 }

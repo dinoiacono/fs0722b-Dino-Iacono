@@ -19,6 +19,10 @@ public class EdificioRunner implements ApplicationRunner {
 	public void run(ApplicationArguments args) throws Exception {
 		System.out.println("EdificioRunner...");
 		
+//		edificioService.insertEdificio("Prova", "Via Roma 1", "Roma");
+//		edificioService.insertEdificio("Milano 2", "Via milano 1", "Milano");
+//		edificioService.insertEdificio("Milano 3", "Via milano 3", "Milano");
+//		edificioService.insertEdificio("Firenze 10", "Via firenze 3", "Firenze");
 
 	}
 
