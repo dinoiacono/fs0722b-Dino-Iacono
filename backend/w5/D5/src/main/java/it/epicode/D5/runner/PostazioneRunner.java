@@ -25,8 +25,8 @@ public class PostazioneRunner implements ApplicationRunner{
 //		postazioneService.insertPostazione(edificioService.getEdificioByID(2l),"Prova 3", TipoPostazione.OPENSPACE);
 //		postazioneService.insertPostazione(edificioService.getEdificioByID(3l), "Prova 4", TipoPostazione.SALARIUNIONI);
 		
-		List<Postazione> listaP = postazioneService.getAllPostazioneByTipo(TipoPostazione.PRIVATO);
-		listaP.forEach(p -> p.stampaPostazione());
+//		List<Postazione> listaP = postazioneService.getAllPostazioneByTipo(TipoPostazione.PRIVATO);
+//		listaP.forEach(p -> p.stampaPostazione());
 		
 //		List<Postazione> listaPosti = postazioneService.getAllPostazioneByCity("Roma");
 //		listaPosti.forEach(p -> p.stampaPostazione());

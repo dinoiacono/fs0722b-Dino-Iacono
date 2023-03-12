@@ -19,8 +19,8 @@ public class PrenotazioneRunner implements ApplicationRunner{
 	public void run(ApplicationArguments args) throws Exception {
 		System.out.println("PrenotazioneRunner...");
 		
-		Postazione postazione = postazioneService.getPostazioneByID(1l);
-		Utente utente = utenteService.getUtenteByID(2l);
+//		Postazione postazione = postazioneService.getPostazioneByID(1l);
+//		Utente utente = utenteService.getUtenteByID(2l);
 		
 //		prenotazioneService.salvaPrenotazione(utente, postazione, "2023-03-10", 10);		
 //		prenotazioneService.salvaPrenotazione(utente, postazione, "2023-03-11", 50);

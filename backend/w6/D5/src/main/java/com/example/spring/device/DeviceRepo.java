@@ -1,9 +1,10 @@
-package com.example.spring.dispositivo;
+package com.example.spring.device;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface DispositivoRepo extends JpaRepository<Dispositivo, Long> {
+public interface DeviceRepo extends JpaRepository<Device, Long> {
 
+	
 }
