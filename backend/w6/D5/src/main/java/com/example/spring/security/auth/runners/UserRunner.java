@@ -68,6 +68,12 @@ public class UserRunner implements ApplicationRunner {
 		Device dev1 = new Device(DeviceStatus.DISPONIBILE, DeviceType.LAPTOP);
 		devRepo.save(dev1);
 		
+		Device dev2 = new Device(DeviceStatus.DISPONIBILE, DeviceType.SMARTPHONE);
+		devRepo.save(dev1);
+		
+		Device dev3 = new Device(DeviceStatus.MANUTENZIONE, DeviceType.TABLET);
+		devRepo.save(dev1);
+		
 	}
 
 }
