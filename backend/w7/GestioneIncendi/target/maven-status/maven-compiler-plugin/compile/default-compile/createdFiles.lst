@@ -1,0 +1,15 @@
+com/SistemaRilevamentoIncendi/services/SondaService.class
+com/SistemaRilevamentoIncendi/entities/Sonda.class
+com/SistemaRilevamentoIncendi/controllers/ProcessController.class
+com/SistemaRilevamentoIncendi/repositories/ProcessRepository.class
+com/SistemaRilevamentoIncendi/runners/Runner.class
+com/SistemaRilevamentoIncendi/controllers/SondaController.class
+com/SistemaRilevamentoIncendi/entities/DeviceFactory.class
+com/SistemaRilevamentoIncendi/entities/ProcessFactory.class
+com/SistemaRilevamentoIncendi/SpringBootSistemaRilevamentoIncendiApplication.class
+com/SistemaRilevamentoIncendi/entities/DeviceProcess.class
+com/SistemaRilevamentoIncendi/utils/DeviceType.class
+com/SistemaRilevamentoIncendi/services/ProcessService.class
+com/SistemaRilevamentoIncendi/repositories/SondaRepository.class
+com/SistemaRilevamentoIncendi/exceptions/MyExceptions.class
+com/SistemaRilevamentoIncendi/entities/Device.class

@@ -1,0 +1,15 @@
+/Users/dinoiacono/corsi/epicode/repo/corso_epicode/backend/w7/SpringBoot_SistemaRilevamentoIncendi/src/main/java/com/SistemaRilevamentoIncendi/repositories/SondaRepository.java
+/Users/dinoiacono/corsi/epicode/repo/corso_epicode/backend/w7/SpringBoot_SistemaRilevamentoIncendi/src/main/java/com/SistemaRilevamentoIncendi/utils/DeviceType.java
+/Users/dinoiacono/corsi/epicode/repo/corso_epicode/backend/w7/SpringBoot_SistemaRilevamentoIncendi/src/main/java/com/SistemaRilevamentoIncendi/entities/Device.java
+/Users/dinoiacono/corsi/epicode/repo/corso_epicode/backend/w7/SpringBoot_SistemaRilevamentoIncendi/src/main/java/com/SistemaRilevamentoIncendi/repositories/ProcessRepository.java
+/Users/dinoiacono/corsi/epicode/repo/corso_epicode/backend/w7/SpringBoot_SistemaRilevamentoIncendi/src/main/java/com/SistemaRilevamentoIncendi/controllers/SondaController.java
+/Users/dinoiacono/corsi/epicode/repo/corso_epicode/backend/w7/SpringBoot_SistemaRilevamentoIncendi/src/main/java/com/SistemaRilevamentoIncendi/services/SondaService.java
+/Users/dinoiacono/corsi/epicode/repo/corso_epicode/backend/w7/SpringBoot_SistemaRilevamentoIncendi/src/main/java/com/SistemaRilevamentoIncendi/SpringBootSistemaRilevamentoIncendiApplication.java
+/Users/dinoiacono/corsi/epicode/repo/corso_epicode/backend/w7/SpringBoot_SistemaRilevamentoIncendi/src/main/java/com/SistemaRilevamentoIncendi/entities/DeviceFactory.java
+/Users/dinoiacono/corsi/epicode/repo/corso_epicode/backend/w7/SpringBoot_SistemaRilevamentoIncendi/src/main/java/com/SistemaRilevamentoIncendi/controllers/ProcessController.java
+/Users/dinoiacono/corsi/epicode/repo/corso_epicode/backend/w7/SpringBoot_SistemaRilevamentoIncendi/src/main/java/com/SistemaRilevamentoIncendi/exceptions/MyExceptions.java
+/Users/dinoiacono/corsi/epicode/repo/corso_epicode/backend/w7/SpringBoot_SistemaRilevamentoIncendi/src/main/java/com/SistemaRilevamentoIncendi/entities/ProcessFactory.java
+/Users/dinoiacono/corsi/epicode/repo/corso_epicode/backend/w7/SpringBoot_SistemaRilevamentoIncendi/src/main/java/com/SistemaRilevamentoIncendi/entities/DeviceProcess.java
+/Users/dinoiacono/corsi/epicode/repo/corso_epicode/backend/w7/SpringBoot_SistemaRilevamentoIncendi/src/main/java/com/SistemaRilevamentoIncendi/entities/Sonda.java
+/Users/dinoiacono/corsi/epicode/repo/corso_epicode/backend/w7/SpringBoot_SistemaRilevamentoIncendi/src/main/java/com/SistemaRilevamentoIncendi/runners/Runner.java
+/Users/dinoiacono/corsi/epicode/repo/corso_epicode/backend/w7/SpringBoot_SistemaRilevamentoIncendi/src/main/java/com/SistemaRilevamentoIncendi/services/ProcessService.java
