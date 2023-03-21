@@ -23,12 +23,10 @@ public class TestSondaService {
 	public void testSetSmokeLevel() {
 			 Set<ProcessoDispositivo> x = s.getListaProcessi();
 			 x.add(d);
-			// check list size
 			 assertEquals(1,x.size());
 			 s.setSmokeLevel(5);
 		        for (ProcessoDispositivo o : x) {
 		        	o.setSmokeLevel(s.getSmokeLevel());
-		        	// check smoke level
 		        	assertEquals(s.getSmokeLevel(), o.getSmokeLevel());
 		        }
 		    }
