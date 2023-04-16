@@ -22,12 +22,9 @@ public class Chat {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	
-	@OneToOne(mappedBy = "Chat")
-	private User user1;
+	@ManyToMany
+	private List<User> users; 
 	
-	@OneToOne(mappedBy = "Chat")
-	private User user2;
-	
-	@OneToMany(mappedBy ="Chat", cascade = CascadeType.MERGE)
+	@OneToMany(cascade = CascadeType.MERGE)
 	private List<Message> messages;
 }

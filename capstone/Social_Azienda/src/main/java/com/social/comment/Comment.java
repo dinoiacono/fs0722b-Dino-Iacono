@@ -3,6 +3,7 @@ package com.social.comment;
 import javax.persistence.*;
 
 import com.social.auth.users.User;
+import com.social.post.Post;
 
 import lombok.*;
 
@@ -19,8 +20,12 @@ public class Comment {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	
-//	private User user;
+	@ManyToOne
+	private User user;
 	
 	private String text;
+	
+	@ManyToOne
+	private Post post;
 	
 }

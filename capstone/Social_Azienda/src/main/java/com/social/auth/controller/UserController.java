@@ -27,7 +27,6 @@ public class UserController {
 	@PreAuthorize("hasRole('ADMIN')")
 	public Page<User> userList(Pageable pageable) {
 
-		
 		Page<User> findAll = userRepository.findAll(pageable);
 
 		findAll.forEach(usr -> usr.setPassword("********"));

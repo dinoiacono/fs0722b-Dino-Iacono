@@ -22,11 +22,13 @@ public class Post {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	
-	private User author;
+	@ManyToOne
+	private User user;
 	
 	private String title;
 	
 	private String content;
 	
-//	private List<Comment> comments; 
+	@OneToMany(cascade = CascadeType.MERGE)
+	private List<Comment> comments; 
 }

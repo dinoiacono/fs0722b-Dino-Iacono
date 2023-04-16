@@ -3,6 +3,7 @@ package com.social.message;
 import javax.persistence.*;
 
 import com.social.auth.users.User;
+import com.social.chat.Chat;
 
 import lombok.*;
 
@@ -19,13 +20,16 @@ public class Message {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	
-	@OneToOne(mappedBy = "Message")
-	private User sender;
-	
-	@OneToOne(mappedBy = "Message")
-	private User receiver;
-	
 	private String object;
 	
 	private String text;
+	
+	@ManyToOne
+	private User sender;
+	
+	@ManyToOne
+	private User addressee;
+	
+	@ManyToOne
+	private Chat chat;
 }
